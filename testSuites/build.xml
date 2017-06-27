@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Build Test" parallel="tests" verbose="1" configfailurepolicy="continue" thread-count="1">
+<listeners>
+        <listener class-name="com.framework.wrapper.WebDriverListener" />
+    </listeners>
+	<test name="Build_Test">
+		<parameter name="browser" value="chrome" />
+		<parameter name="environment" value="breitling" />
+		<parameter name="exeMode" value="local" />
+		<classes>
+			<class name="com.retail.testng.runners.BuildTest" />
+		</classes>
+	</test>
+</suite>
