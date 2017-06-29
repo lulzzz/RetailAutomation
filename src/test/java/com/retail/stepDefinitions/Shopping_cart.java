@@ -9,7 +9,7 @@ import com.retail.pageObjects.Shopping_cartPage;
 import cucumber.api.java.en.*;
 
 
-public class Shopping_cart extends WebOperations{
+public class Shopping_cart extends Shopping_cartPage{
 
 	private static Logger log = Logger.getLogger(Shopping_cart.class);
 	
@@ -17,10 +17,10 @@ public class Shopping_cart extends WebOperations{
 	@When("^I select Continue to Checkout Button$")	
 	public  void continueToCheckout()  {
 		try {
-			Thread.sleep(3000);			
+				
 			clickElement(Shopping_cartPage.continueToCheckout);			
 			log.info("Continue to check out");	
-			Thread.sleep(1000);		
+			
 			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Shopping_cartPage(): " + LogUtils.logStackTrace(e));
@@ -29,14 +29,14 @@ public class Shopping_cart extends WebOperations{
 	}	
 	@Then("^I verify the device charges$")
 	public  void verifyDeviceCharges()  {
-		try {
+		try {				
 			Thread.sleep(5000);			
 			String charges_ShoppingCart=getValue(Shopping_cartPage.estimatedMonthlycost_shoppingcart);
 	        verifyText(charges_ShoppingCart);
 	        String charges_oneTimeCharge=getValue(Shopping_cartPage.oneTimeCharge_shoppingcart);
 	        verifyText(charges_oneTimeCharge);
 			log.info("verify Estimated monthly cost");	
-			Thread.sleep(5000);		
+			
 			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Shopping_cartPage():" + LogUtils.logStackTrace(e));

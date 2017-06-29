@@ -16,6 +16,7 @@ public class Device_SearchPage extends WebOperations{
 	searchbutton = By.xpath("/html/body/my-app/main/my-device-search/div[1]/form/div/div/div[2]/my-btn/button"),	
 	SIMnum = By.xpath("//INPUT[@_ngcontent-c5='']"),
 	editsim = By.linkText("Edit SIM"),
+	verifybutton = By.xpath("//button[@_ngcontent-c8=''][text()='Verify']"),
 	nextbutton = By.xpath("//*[@id='primarynextbtn']/button");	
 	
 }

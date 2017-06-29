@@ -7,19 +7,19 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 import com.framework.utils.LogUtils;
-import com.framework.wrapper.*;
+
 
 import com.retail.pageObjects.SignaturePage;
 
 import cucumber.api.java.en.*;
 
-public class Signature extends WebOperations{
+public class Signature extends SignaturePage{
 
 	private static Logger log = Logger.getLogger(Signature.class);
 	
 	Customer_PreSignature custPreSignObj= new Customer_PreSignature();
 	
-	//CheckOut for a customer
+//CheckOut for a customer
 @When("^I check the check box for I agree to use electronic records and signatures$")	
 	public  void checkAgreement()  {
 		try {
@@ -61,10 +61,11 @@ public class Signature extends WebOperations{
 			e.printStackTrace();
 		}
 	}
+
 @And("^agent provides digital signature and accepts to T&C$")		
 	public  void agreeToSign() throws Exception {
 		try {
-			checkAgreement();
+			 checkAgreement();
 			 checkContinue();
 			 clickContinue_Signature();
 			 clickSign_Signature();				 
@@ -84,21 +85,15 @@ public class Signature extends WebOperations{
 		                .release(wbCanvas)
 		                .build();				
 			 drawOnCanvas.perform();
-			 }
-			 
-			 Thread.sleep(5000);
+			 }		 
+			
 		
-			//Click On Adopt and sign
-			Thread.sleep(5000);
+			//Click On Adopt and sign			
 			clickElement(SignaturePage.adopt_Sign);
 				 
-			//Click on Finish Button
-			Thread.sleep(5000);
+			//Click on Finish Button			
 			clickElement(SignaturePage.finishBtn);			
-			Thread.sleep(5000);
 			
-			//Place Order
-			//custPreSignObj.placeOrder();
 			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));

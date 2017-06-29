@@ -29,8 +29,8 @@ Scenario: Choose Data option
 	Then I see the selected option highlighted
 
 Scenario: Clicking on Next button
-	Given I lookup for a custoemr and I shop a device   
+	Given I lookup for a customer and I shop a device   
 	When I search for a particular device
  	Then I see the configuration details of the selected device
-	When I click on Next button
+	When I click on Next button in DeviceConfig
 	Then I should be redirected to next page-Device_Customize

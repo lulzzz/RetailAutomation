@@ -1,5 +1,27 @@
 <testcases>
-	<testcase name="Placing a single device in store order through Scan option">
+	<testcase name="Placing a single ACME device in store order through Scan option">
+		<property name="AccountNumber" value="8069100020038930" />		
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+	</testcase>
+	<testcase name="Placing a single Android device in store order through Scan option">
 		<property name="AccountNumber" value="8069100020038930" />		
 		<property name="ID_Validation" value="Driver License" />	
 		<property name="SSN" value="1111" />	
@@ -21,4 +43,52 @@
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
 	</testcase>
+	<testcase name="Placing an ANDROID single device in store order through Verify Link option">
+		<property name="AccountNumber" value="8069100020038930" />		
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+		<property name="Device_Name" value="Apple iPhone 7 Plus" />
+		<property name="DeviceBrandName" value="Apple" />
+		<property name="Capacity" value="A1661-128gb" />
+		<property name="Color" value="Orchid Gray" />
+	</testcase>
+	<testcase name="Placing an ACME single device in store order through Verify Link option">
+		<property name="AccountNumber" value="8069100020038930" />		
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+		<property name="Device_Name" value="Apple iPhone 7 Plus" />
+		<property name="DeviceBrandName" value="Apple" />
+		<property name="Capacity" value="A1661-128gb" />
+		<property name="Color" value="Orchid Gray" />
+</testcase>
 </testcases>

@@ -12,7 +12,7 @@ import com.retail.pageObjects.Customer_PreSignaturePage;
 import cucumber.api.java.en.*;
 
 
-public class Customer_PreSignature extends WebOperations{
+public class Customer_PreSignature extends Customer_PreSignaturePage{
 
 	private static Logger log = Logger.getLogger(Customer_PreSignature.class);
 	
@@ -20,10 +20,10 @@ public class Customer_PreSignature extends WebOperations{
 	@Then("^I see estimated monthly charges$")	
 	public  void verifyEstimatedcharges()  {
 		try {
-			Thread.sleep(5000);
+			
 			String estimatedChargesToday=getValue(Customer_PreSignaturePage.estimatedChargesToday);
 	        verifyText(estimatedChargesToday);
-	        Thread.sleep(5000);
+	      
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
@@ -32,6 +32,7 @@ public class Customer_PreSignature extends WebOperations{
 	@When("^I see  same as service address is checked$")	
 	public  void checkServiceAddress()  {
 		try {
+			Thread.sleep(5000);
 			clickElement(Customer_PreSignaturePage.sameServiceAddress);
 			log.info("Same as service address check box is checked");
 		}catch (Exception e) {
@@ -76,9 +77,8 @@ public class Customer_PreSignature extends WebOperations{
 			
 				clickElement(Customer_PreSignaturePage.updateAddressRecommended);
 				clickElement(Customer_PreSignaturePage.update_billingAddress);
-				isElementDisplayed(Customer_PreSignaturePage.edit_billingAddress,5);
-					System.out.println("billing address is saved");
-					log.info("billing address is saved");
+				isElementDisplayed(Customer_PreSignaturePage.edit_billingAddress,5);				
+				log.info("billing address is saved");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
@@ -88,9 +88,7 @@ public class Customer_PreSignature extends WebOperations{
 	public  void validCreditCardDetails()  {
 		try {			
 			if(checkElement(Customer_PreSignaturePage.edit_paymentAddress))
-			{
-				
-				System.out.println("Credit information is saved already");
+			{				
 				log.info("Credit information is saved already");
 			}
 			else
@@ -113,9 +111,8 @@ public class Customer_PreSignature extends WebOperations{
 	public static void creditDetailsSaved()  {
 		try {
 			
-				checkElement(Customer_PreSignaturePage.edit_paymentAddress);
-				System.out.println("credit details are saved");
-					log.info("credit details are saved");
+				checkElement(Customer_PreSignaturePage.edit_paymentAddress);				
+				log.info("credit details are saved");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
@@ -126,12 +123,10 @@ public class Customer_PreSignature extends WebOperations{
 		try {
 			if(checkElement(Customer_PreSignaturePage.edit_contactInfo))
 			{
-	      
-	        System.out.println("Contact information is saved already");
 			log.info("Contact information is saved already");
 			}
 			else{
-				  clickElement(Customer_PreSignaturePage.Email_Address);
+				  	clickElement(Customer_PreSignaturePage.Email_Address);
 			        getDriver().findElement(Customer_PreSignaturePage.Email_Address).clear();
 			        typeValue(Customer_PreSignaturePage.Email_Address,getExcelData("Email_Address"));
 			        clickElement(Customer_PreSignaturePage.phone_Number);
@@ -148,9 +143,8 @@ public class Customer_PreSignature extends WebOperations{
 	public static void contactDetailsSaved()  {
 		try {
 			
-				checkElement(Customer_PreSignaturePage.edit_contactInfo);
-					System.out.println("contact details are saved");
-					log.info("contact details are saved");
+				checkElement(Customer_PreSignaturePage.edit_contactInfo);					
+				log.info("contact details are saved");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
@@ -196,15 +190,15 @@ public class Customer_PreSignature extends WebOperations{
 		}
 	}
 	
+	@When("^agent submits the order$")
 	public  void placeOrder()  {
 		try {
 		
-			//Click On Place Order
-			Thread.sleep(6000);
-			clickElement(Customer_PreSignaturePage.placeOrderBtn); 
+			//Click On Place Order			
+			//clickElement(Customer_PreSignaturePage.placeOrderBtn); 
 			
 		}catch (Exception e) {
-			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
+			log.error("GOT EXCEPTION in Customer Presignature Page_placeOrder(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
 		}
 	}

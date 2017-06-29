@@ -10,6 +10,6 @@ public class Shopping_cartPage extends WebOperations{
 
 	public static By 
     estimatedMonthlycost_shoppingcart =By.xpath("//DIV[@_ngcontent-c24=''][text()='ESTIMATED MONTHLY']"),
-    continueToCheckout = By.xpath("(//button[@_ngcontent-c8=''])[7]"),
+    continueToCheckout = By.xpath("/html/body/my-app/main/my-cart-container/div/div/div[4]/div/div[2]/my-btn[2]/button"),
 	oneTimeCharge_shoppingcart =By.xpath("//DIV[@_ngcontent-c24=''][text()='ONE TIME CHARGE']");
 }

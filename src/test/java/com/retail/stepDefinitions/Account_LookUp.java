@@ -1,7 +1,7 @@
 package com.retail.stepDefinitions;
 
 import org.apache.log4j.Logger;
-
+import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
 import com.framework.wrapper.*;
 import com.retail.pageObjects.Account_LookUpPage;
@@ -9,25 +9,22 @@ import com.retail.pageObjects.Account_LookUpPage;
 import cucumber.api.java.en.*;
 
 
-public class Account_LookUp extends WebOperations{
+public class Account_LookUp extends Account_LookUpPage{
 
 	private static Logger log = Logger.getLogger(Account_LookUp.class);
-	
 	Account_Details acctDetailsObj= new Account_Details();
-	
+	Customer_MoreInfo custMoreInfoObj= new Customer_MoreInfo();
+		
 	@When("^I enter valid account number$")
 	public void enterValidAcctNumber()
 	{
-		try {
-			Thread.sleep(5000);			
-			clickElement(Account_LookUpPage.lookUpInput);
-			System.out.println(getXMLData("AccountNumber"));
+		try {	
+			ExtentReporter.reportStep("BDD Step: When I enter valid account number", "INFO");
+			clickElement(Account_LookUpPage.lookUpInput);			
 			typeValue(Account_LookUpPage.lookUpInput,getXMLData("AccountNumber"));
-			log.info("Entered Customer Look Up Value");	
-			Thread.sleep(5000);
-						
+			log.info("Entered Customer Look Up Value");					
 		}catch (Exception e) {
-			log.error("GOT EXCEPTION in enterValidAcctNumber(): " + LogUtils.logStackTrace(e));
+			log.error("GOT EXCEPTION in Account_LookUp_enterValidAcctNumber(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
 		}
 	}		
@@ -36,14 +33,13 @@ public class Account_LookUp extends WebOperations{
 	public void clickOnLookUp()
 	{
 		try {
-			
+			ExtentReporter.reportStep("BDD Step: And click on Look Up", "INFO");
 			clickElement(Account_LookUpPage.lookUpButton);
-			log.info("Clicked on Look Up Button");	
-			Thread.sleep(5000);	
+			log.info("Clicked on Look Up Button");				
 			WebOperations.verifyText("Please validate customer ID");
 			
 		}catch (Exception e) {
-			log.error("GOT EXCEPTION in clickOnLookUp(): " + LogUtils.logStackTrace(e));
+			log.error("GOT EXCEPTION in Account_LookUp_clickOnLookUp(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
 		}
 	}
@@ -51,15 +47,15 @@ public class Account_LookUp extends WebOperations{
 	@Then("^I see the customer ID validation to launch the customer details$")
 	public void acctDetailsPageLaunch()
 	{
-		try {			
+		try {	
+			ExtentReporter.reportStep("BDD Step: Then I see the customer ID validation to launch the customer details", "INFO");
 			//Customer ID Validation
 			String customer_ID= getXMLData("ID_Validation").toUpperCase();
 			log.info(customer_ID);
 			if(customer_ID.equalsIgnoreCase("Driver License"))
 			{				
 				log.info("Validated Customer ID using Driver License");
-				clickElement(Account_LookUpPage.driverLicense);
-				Thread.sleep(5000);
+				clickElement(Account_LookUpPage.driverLicense);				
 			}else if(customer_ID.equalsIgnoreCase("State ID"))
 			{
 				clickElement(Account_LookUpPage.stateID);
@@ -68,13 +64,10 @@ public class Account_LookUp extends WebOperations{
 			{
 				clickElement(Account_LookUpPage.USPassport);
 				log.info("Validated Customer ID using US Passport");
-			}			
-			Thread.sleep(5000);	
-			
-			acctDetailsObj.launchMobile();	
+			}
 			
 		}catch (Exception e) {
-			log.error("GOT EXCEPTION in acctDetailsPageLaunch(): " + LogUtils.logStackTrace(e));
+			log.error("GOT EXCEPTION in Account_LookUp_acctDetailsPageLaunch(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
 		}
 	}
@@ -83,11 +76,17 @@ public class Account_LookUp extends WebOperations{
 	@Given("^agent looks for an eligible customer details$")	
 	public void customerLookup()  {
 		try {
+			ExtentReporter.reportStep("BDD Step: Given agent looks for an eligible customer details", "INFO");
+			Thread.sleep(4000);
 			enterValidAcctNumber();
 			clickOnLookUp();
 			acctDetailsPageLaunch();
+			acctDetailsObj.launchMobile();
+			custMoreInfoObj.enterValidDOB();	
+			custMoreInfoObj.enterValidSSN();
+			custMoreInfoObj.selectValidLines();
 		}catch (Exception e) {
-			log.error("GOT EXCEPTION in customerLookup(): " + LogUtils.logStackTrace(e));
+			log.error("GOT EXCEPTION in Account_LookUp_customerLookup(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
 		}
 	}	

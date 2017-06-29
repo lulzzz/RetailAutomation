@@ -4,14 +4,18 @@ import org.apache.log4j.Logger;
 
 import com.framework.utils.LogUtils;
 import com.framework.wrapper.*;
+import com.retail.pageObjects.Device_BrandPage;
 import com.retail.pageObjects.Device_SearchPage;
 
 import cucumber.api.java.en.*;
 
 
-public class Device_Search extends WebOperations{
+public class Device_Search extends Device_SearchPage{
 
 	private static Logger log = Logger.getLogger(Device_Search.class);
+	Account_LookUp accountlookup = new Account_LookUp();
+	Account_Details acctDetailsObj= new Account_Details();
+	Customer_MoreInfo custMoreInfoObj= new Customer_MoreInfo();
 		
 @When("^I enter valid IMEI with 15 digits$")	
 	public void validIMEI()  {
@@ -32,7 +36,9 @@ public class Device_Search extends WebOperations{
 	public void searchbutton()  {
 	try {
 		clickElement(Device_SearchPage.searchbutton);
-		log.info("Clicked on search button");			
+		log.info("Clicked on search button");	
+		Thread.sleep(5000);	
+		
 	}catch (Exception e) {
 		log.error("GOT EXCEPTION in searchbutton(): " + LogUtils.logStackTrace(e));
 		e.printStackTrace();
@@ -53,22 +59,21 @@ public class Device_Search extends WebOperations{
 
 @When("^I enter valid SIM number with 20 digits$")
 public void validSIMnumber()  {
-	try {		
-		String Edit_Sim =getXMLData("EditSIM");
+	try {	
 		
-		if(checkElement(Device_SearchPage.editsim))
+		if(isElementDisplayed(Device_SearchPage.editsim, 5))
 		{
-			if(Edit_Sim.equalsIgnoreCase("Yes"))
-			{				
 				clickElement(Device_SearchPage.editsim);
-				log.info("Clicked on Edit SIM");	
+				log.info("Clicked on Edit SIM");
+				Thread.sleep(2000);
+				System.out.println(getXMLData("SIMnumber"));
+				clickElement(Device_SearchPage.SIMnum);
+				log.info("Clicked on SIM number");	
 				typeValue(Device_SearchPage.SIMnum,getXMLData("SIMnumber"));				
 				log.info("Entered SIM number");	
-			}else
-			{							
-				log.info("Unedited Sim Number");	
-			}
-		}else
+
+	}
+		else
 		{			
 			clickElement(Device_SearchPage.SIMnum);
 			log.info("Clicked on SIM number");	
@@ -88,7 +93,8 @@ public void validSIMnumber()  {
 public void nextbutton()  {
 	try {
 		clickElement(Device_SearchPage.nextbutton);
-		log.info("Clicked on next button");				
+		log.info("Clicked on next button");	
+		Thread.sleep(5000);				
 	}
 	catch (Exception e) {
 		log.error("GOT EXCEPTION in nextbutton(): " + LogUtils.logStackTrace(e));
@@ -106,5 +112,42 @@ public void nextbutton()  {
 		nextbutton();
 		
 	}
+
+@When("^I click on Verify Button$") 
+public void clickVerify()  {
+try {
+	clickElement(Device_SearchPage.verifybutton);
+	log.info("Clicked on verify button");	
 	
+}catch (Exception e) {
+	log.error("GOT EXCEPTION in verifybutton(): " + LogUtils.logStackTrace(e));
+	e.printStackTrace();
+}
+}
+
+@Then("^I should get redirected to Device_Brands page$")
+public void redirectToDevicBrand()  {
+try {
+	checkElement(Device_BrandPage.PhoneByBrand);
+	log.info("Verify Device Button");	
+	
+}catch (Exception e) {
+	log.error("GOT EXCEPTION in verifybutton(): " + LogUtils.logStackTrace(e));
+	e.printStackTrace();
+}
+}
+	
+@Given("^agent navigates to 'verify' link to shop for a device$")
+public void verifylink(){
+	accountlookup.enterValidAcctNumber();
+	accountlookup.clickOnLookUp();
+	accountlookup.acctDetailsPageLaunch();
+	acctDetailsObj.launchMobile();
+	custMoreInfoObj.enterValidDOB();	
+	custMoreInfoObj.enterValidSSN();
+	custMoreInfoObj.selectValidLines();
+	clickVerify();
+	redirectToDevicBrand();
+	
+}
 }
