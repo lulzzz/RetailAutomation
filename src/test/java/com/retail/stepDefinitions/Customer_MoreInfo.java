@@ -16,7 +16,7 @@ public class Customer_MoreInfo extends Customer_MoreInfoPage{
 	public void enterValidDOB()  {
 		try {
 			ExtentReporter.reportStep("BDD Step: When I give valid date or month and click submit", "INFO");
-			if(checkElement(Customer_MoreInfoPage.dobField))
+			if(isElementDisplayed(Customer_MoreInfoPage.dobField,5000))
 			{
 				clickElement(Customer_MoreInfoPage.dobField);				
 				Actions action = new Actions(getDriver());					
@@ -34,7 +34,7 @@ public class Customer_MoreInfo extends Customer_MoreInfoPage{
 	public void enterValidSSN() {
 		try {			
 			ExtentReporter.reportStep("BDD Step: When I give valid SSN and click submit", "INFO");
-			if(checkElement(Customer_MoreInfoPage.ssnField))
+			if(isElementDisplayed(Customer_MoreInfoPage.ssnField,5000))
 			{
 				clickElement(Customer_MoreInfoPage.ssnField);
 				typeValue(Customer_MoreInfoPage.ssnField,getXMLData("SSN"));				

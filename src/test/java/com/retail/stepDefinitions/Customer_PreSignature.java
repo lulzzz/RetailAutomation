@@ -2,13 +2,9 @@ package com.retail.stepDefinitions;
 
 import org.apache.log4j.Logger;
 
-
+import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
-import com.framework.wrapper.*;
 import com.retail.pageObjects.Customer_PreSignaturePage;
-
-
-
 import cucumber.api.java.en.*;
 
 
@@ -20,7 +16,7 @@ public class Customer_PreSignature extends Customer_PreSignaturePage{
 	@Then("^I see estimated monthly charges$")	
 	public  void verifyEstimatedcharges()  {
 		try {
-			
+			ExtentReporter.reportStep("BDD Step: Then I see estimated monthly charges", "INFO");
 			String estimatedChargesToday=getValue(Customer_PreSignaturePage.estimatedChargesToday);
 	        verifyText(estimatedChargesToday);
 	      
@@ -32,6 +28,7 @@ public class Customer_PreSignature extends Customer_PreSignaturePage{
 	@When("^I see  same as service address is checked$")	
 	public  void checkServiceAddress()  {
 		try {
+			ExtentReporter.reportStep("BDD Step: When I see  same as service address is checked", "INFO");
 			Thread.sleep(5000);
 			clickElement(Customer_PreSignaturePage.sameServiceAddress);
 			log.info("Same as service address check box is checked");
@@ -44,6 +41,7 @@ public class Customer_PreSignature extends Customer_PreSignaturePage{
 	@Then("^I see billing address is autopopulated$")	
 	public  void verifyBillingAddress()  {
 		try {
+			ExtentReporter.reportStep("BDD Step: Then I see billing address is autopopulated", "INFO");
 				String firstName=getValue(Customer_PreSignaturePage.firstName);
 			    String lastName=getValue(Customer_PreSignaturePage.lastName);
 			    String Address1=getValue(Customer_PreSignaturePage.address1);
@@ -61,9 +59,10 @@ public class Customer_PreSignature extends Customer_PreSignaturePage{
 			e.printStackTrace();
 		}
 	}
-	@When("^ I save billing address$")	
+	@When("^I save billing address$")	
 	public  void saveBillingAddress()  {
 		try {
+			ExtentReporter.reportStep("BDD Step: When I save billing address", "INFO");
 			clickElement(Customer_PreSignaturePage.save_billingAddress);
 			log.info("save button in billing address is clicked");
 		}catch (Exception e) {
@@ -74,7 +73,7 @@ public class Customer_PreSignature extends Customer_PreSignaturePage{
 	@Then("^I see billing address is saved$")	
 	public  void billingAddressSaved()  {
 		try {
-			
+				ExtentReporter.reportStep("BDD Step: Then I see billing address is saved", "INFO");
 				clickElement(Customer_PreSignaturePage.updateAddressRecommended);
 				clickElement(Customer_PreSignaturePage.update_billingAddress);
 				isElementDisplayed(Customer_PreSignaturePage.edit_billingAddress,5);				
@@ -87,7 +86,8 @@ public class Customer_PreSignature extends Customer_PreSignaturePage{
 	@When("^I enter valid information for credit card details$")	
 	public  void validCreditCardDetails()  {
 		try {			
-			if(checkElement(Customer_PreSignaturePage.edit_paymentAddress))
+			ExtentReporter.reportStep("BDD Step: When I enter valid information for credit card details", "INFO");
+			if(isElementDisplayed(Customer_PreSignaturePage.edit_paymentAddress,5000))
 			{				
 				log.info("Credit information is saved already");
 			}
@@ -111,7 +111,7 @@ public class Customer_PreSignature extends Customer_PreSignaturePage{
 	public static void creditDetailsSaved()  {
 		try {
 			
-				checkElement(Customer_PreSignaturePage.edit_paymentAddress);				
+				isElementDisplayed(Customer_PreSignaturePage.edit_paymentAddress,5000);				
 				log.info("credit details are saved");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
@@ -121,7 +121,7 @@ public class Customer_PreSignature extends Customer_PreSignaturePage{
 	@When("^I give valid email address and phone number$")	
 	public  void validContactDetails()  {
 		try {
-			if(checkElement(Customer_PreSignaturePage.edit_contactInfo))
+			if(isElementDisplayed(Customer_PreSignaturePage.edit_contactInfo,5000))
 			{
 			log.info("Contact information is saved already");
 			}
@@ -143,7 +143,7 @@ public class Customer_PreSignature extends Customer_PreSignaturePage{
 	public static void contactDetailsSaved()  {
 		try {
 			
-				checkElement(Customer_PreSignaturePage.edit_contactInfo);					
+				isElementDisplayed(Customer_PreSignaturePage.edit_contactInfo,5000);					
 				log.info("contact details are saved");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));

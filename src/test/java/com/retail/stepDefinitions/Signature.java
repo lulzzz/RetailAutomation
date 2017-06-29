@@ -33,7 +33,7 @@ public class Signature extends SignaturePage{
 @Then("^I see the Continue button is enabled$")	
 	public  void checkContinue()  {
 		try {
-		    checkElement(SignaturePage.continue_button);
+			isElementDisplayed(SignaturePage.continue_button,5000);
 		    log.info("Continue button is enabled");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));

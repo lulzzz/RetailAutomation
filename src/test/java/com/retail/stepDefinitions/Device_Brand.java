@@ -1,9 +1,7 @@
 package com.retail.stepDefinitions;
 
 import org.apache.log4j.Logger;
-
 import com.framework.utils.LogUtils;
-import com.framework.wrapper.*;
 import com.retail.pageObjects.*;
 
 
@@ -29,7 +27,7 @@ public class Device_Brand extends Device_BrandPage{
 @Then("^Then I am redirected to Browse_Devices page$")
 public void redirectedToBrowseDevice(){
 	try {
-		checkElement(Browse_DevicePage.deviceButton);
+		isElementDisplayed(Browse_DevicePage.deviceButton,5000);
 		log.info("Redirected to Browse_Device Page");
 	}catch (Exception e) {
 		log.error("GOT EXCEPTION in Device_Brand(): " + LogUtils.logStackTrace(e));

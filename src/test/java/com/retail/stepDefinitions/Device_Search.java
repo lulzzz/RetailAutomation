@@ -128,7 +128,7 @@ try {
 @Then("^I should get redirected to Device_Brands page$")
 public void redirectToDevicBrand()  {
 try {
-	checkElement(Device_BrandPage.PhoneByBrand);
+	isElementDisplayed(Device_BrandPage.PhoneByBrand,5000);
 	log.info("Verify Device Button");	
 	
 }catch (Exception e) {

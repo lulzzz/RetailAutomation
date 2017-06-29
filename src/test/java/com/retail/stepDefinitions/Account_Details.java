@@ -17,7 +17,7 @@ public class Account_Details extends Account_DetailsPage{
 	public void launchMobile()  {
 		try {
 			ExtentReporter.reportStep("BDD Step: When I click Launch Mobile", "INFO");
-			if(checkElement(Account_DetailsPage.manageMobileLink))
+			if(isElementDisplayed(Account_DetailsPage.manageMobileLink,5000))
 			{								
 				clickElement(Account_DetailsPage.launchMobileRtBtn);
 			}else
