@@ -3,7 +3,6 @@ package com.retail.stepDefinitions;
 import org.apache.log4j.Logger;
 
 import com.framework.utils.LogUtils;
-import com.framework.wrapper.*;
 import com.retail.pageObjects.DeviceBrandPage;
 import com.retail.pageObjects.DeviceSearchPage;
 
@@ -50,7 +49,7 @@ public class DeviceSearch extends DeviceSearchPage{
 @Then("^I should see a Popup with Device details$")
 	public void devicedetails() throws Exception {
 	try {
-		WebOperations.verifyText("Sim Number");
+		//WebOperations.verifyText("Sim Number");
 		log.info("Device Search Page contains SIM NUMBER text");			
 	}
 	catch (Exception e) {
@@ -69,7 +68,7 @@ public void validSIMnumber() throws Exception {
 				clickElement(DeviceSearchPage.editsim);
 				log.info("Clicked on Edit SIM");
 //				Thread.sleep(2000);
-				System.out.println(getXMLData("SIMnumber"));
+//				System.out.println(getXMLData("SIMnumber"));
 				clickElement(DeviceSearchPage.SIMnum);
 				log.info("Clicked on SIM number");	
 				typeValue(DeviceSearchPage.SIMnum,getXMLData("SIMnumber"));				
@@ -110,7 +109,8 @@ public void nextbutton() throws Exception {
 @And("^agent scans the device$")
 		public void scanDevice() throws Exception
 	{
-		try{validIMEI();
+		try{
+		validIMEI();
 		searchbutton();
 		devicedetails();
 		validSIMnumber();

@@ -20,10 +20,11 @@
 		<property name="CVV" value="123" />
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
+		<property name="Ship_Flow" value="No" />
 	</testcase>
 	<testcase name="Placing a single Android device in store order through Scan option">
 		<property name="AccountNumber" value="8069100020038930" />		
-		<property name="ID_Validation" value="Driver License" />	
+		<property name="ID_Validation" value="State ID" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
@@ -42,10 +43,11 @@
 		<property name="CVV" value="123" />
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
+		<property name="Ship_Flow" value="No" />
 	</testcase>
 	<testcase name="Placing an ANDROID single device in store order through Verify Link option">
 		<property name="AccountNumber" value="8069100020038930" />		
-		<property name="ID_Validation" value="Driver License" />	
+		<property name="ID_Validation" value="US Passport" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
@@ -62,10 +64,11 @@
 		<property name="CVV" value="123" />
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
-		<property name="Device_Name" value="Apple iPhone 7 Plus" />
-		<property name="DeviceBrandName" value="Apple" />
-		<property name="Capacity" value="A1661-128gb" />
+		<property name="Device_Name" value="Samsung Galaxy S8" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="SM-G950U-64gb" />
 		<property name="Color" value="Orchid Gray" />
+		<property name="Ship_Flow" value="Yes" />
 	</testcase>
 	<testcase name="Placing an ACME single device in store order through Verify Link option">
 		<property name="AccountNumber" value="8069100020038930" />		
@@ -88,7 +91,8 @@
 		<property name="Phone_Number" value="5467891234" />	
 		<property name="Device_Name" value="Apple iPhone 7 Plus" />
 		<property name="DeviceBrandName" value="Apple" />
-		<property name="Capacity" value="A1661-128gb" />
+		<property name="Capacity" value="A1661-32gb" />
 		<property name="Color" value="Orchid Gray" />
+		<property name="Ship_Flow" value="Yes" />
 </testcase>
 </testcases>

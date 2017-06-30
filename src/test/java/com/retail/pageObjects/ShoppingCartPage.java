@@ -9,7 +9,7 @@ public class ShoppingCartPage extends WebOperations{
 	//private static Logger log = Logger.getLogger(Account_LookUpPage.class);
 
 	public static By 
-    estimatedMonthlycost_shoppingcart =By.xpath("//DIV[@_ngcontent-c24=''][text()='ESTIMATED MONTHLY']"),
-    continueToCheckout = By.xpath("/html/body/my-app/main/my-cart-container/div/div/div[4]/div/div[2]/my-btn[2]/button"),
-	oneTimeCharge_shoppingcart =By.xpath("//DIV[@_ngcontent-c24=''][text()='ONE TIME CHARGE']");
+	estimatedMonthlycost_shoppingcart=By.xpath("//div[text()='ESTIMATED MONTHLY']"),
+	continueToCheckout= By.xpath("//button[text()='Continue to Checkout']"),
+	oneTimeCharge_shoppingcart=By.xpath("//div[text()='ONE TIME CHARGE']");
 }

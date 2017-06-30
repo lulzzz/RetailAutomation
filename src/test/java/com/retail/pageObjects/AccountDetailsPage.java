@@ -9,10 +9,9 @@ public class AccountDetailsPage extends WebOperations{
 	//private static Logger log = Logger.getLogger(Account_LookUpPage.class);
 
 	public static By 
-
-	launchMobileBtn = By.xpath("//BUTTON[@class='md-primary btn-blue md-button md-ink-ripple']"),
-	launchMobileRtBtn = By.xpath("//BUTTON[@class='md-primary btn-blue md-button md-ink-ripple']"),
-	manageMobileLink = By.xpath("//A[@href=''][text()='Manage Mobile Devices']");
+	launchMobileBtn = By.xpath("//BUTTON[text()='Launch Mobile']"),
+	launchMobileRtBtn = By.xpath("//BUTTON[text()='Launch Mobile']"),
+	manageMobileLink = By.xpath("//A[text()='Manage Mobile Devices']");
 	
 	
 }

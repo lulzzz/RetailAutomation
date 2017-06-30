@@ -10,10 +10,10 @@ public class CustomerInfoPage extends WebOperations{
 
 	public static By 
 
-	dobField = By.xpath("(//INPUT[@_ngcontent-c5=''])[1]"),
-	ssnField = By.xpath("(//INPUT[@_ngcontent-c5=''])[2]"),
+	dobField = By.xpath("//input[@type='date']"),
+	ssnField = By.xpath("//input[@type='text']"),
 	justAccessories = By.xpath("//BUTTON[@_ngcontent-c4=''][1]"),
 	singleLine = By.xpath("//BUTTON[@_ngcontent-c4=''][2]"),
-	submitBtn = By.xpath("//BUTTON[@_ngcontent-c8=''][text()='Submit']");	
+	submitBtn = By.xpath("//BUTTON[text()='Submit']");	
 	
 }

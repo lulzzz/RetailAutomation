@@ -30,8 +30,8 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 	public  void checkServiceAddress() throws Exception {
 		try {
 			ExtentReporter.reportStep("BDD Step: When I see  same as service address is checked", "INFO");
-			Thread.sleep(5000);
-			clickElement(CustomerPreSignaturePage.sameServiceAddress);
+			Thread.sleep(5000);			
+			clickElement(CustomerPreSignaturePage.sameServiceAddress);			
 			log.info("Same as service address check box is checked");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
@@ -54,7 +54,7 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 			    {
 			    	ExtentReporter.reportStep(getDriver(), "Billing Address is autopopulated.", "PASS",  1);
 			    }
-			log.info("Same as service address check box is checked");
+			log.info("Billing Address is verified.");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
@@ -65,7 +65,8 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 	public  void saveBillingAddress() throws Exception {
 		try {
 			ExtentReporter.reportStep("BDD Step: When I save billing address", "INFO");
-			clickElement(CustomerPreSignaturePage.save_billingAddress);
+			Thread.sleep(6000);
+			clickElement(CustomerPreSignaturePage.save_billingAddress);			
 			log.info("save button in billing address is clicked");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
@@ -91,7 +92,7 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 	public  void validCreditCardDetails() throws Exception {
 		try {			
 			ExtentReporter.reportStep("BDD Step: When I enter valid information for credit card details", "INFO");
-			if(isElementDisplayed(CustomerPreSignaturePage.edit_paymentAddress,10))
+			if(checkElement(CustomerPreSignaturePage.edit_paymentAddress))
 			{				
 				log.info("Credit information is saved already");
 			}
@@ -148,8 +149,7 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 	}
 	@Then("^I see the contact information is saved$")	
 	public static void contactDetailsSaved() throws Exception {
-		try {
-			
+		try {		
 				isElementDisplayed(CustomerPreSignaturePage.edit_contactInfo,10);					
 				log.info("contact details are saved");
 		}catch (Exception e) {
@@ -161,6 +161,7 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 	@When("^I select the check in information is correct$")	
 	public  void CheckInfo() throws Exception {
 		try {
+			Thread.sleep(7000);
 	        clickElement(CustomerPreSignaturePage.verify_info);
 	        log.info("I select the check in information is correct");
 		}catch (Exception e) {
@@ -182,8 +183,7 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 	}
 	@Then("^agent sees the billing address details along with payment & contact info$")	
 	public  void verifyDetails() throws Exception {
-		try {
-		
+		try {		
 			checkServiceAddress();
 			verifyBillingAddress();
 			saveBillingAddress();
@@ -203,10 +203,9 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 	
 	@When("^agent submits the order$")
 	public  void placeOrder() throws Exception {
-		try {
-		
+		try {		
 			//Click On Place Order			
-			clickElement(CustomerPreSignaturePage.placeOrderBtn); 
+			//clickElement(CustomerPreSignaturePage.placeOrderBtn); 
 			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page_placeOrder(): " + LogUtils.logStackTrace(e));
