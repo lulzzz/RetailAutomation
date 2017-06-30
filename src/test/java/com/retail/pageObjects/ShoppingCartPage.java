@@ -4,7 +4,7 @@ package com.retail.pageObjects;
 import org.openqa.selenium.By;
 import com.framework.wrapper.WebOperations;
 
-public class Shopping_cartPage extends WebOperations{
+public class ShoppingCartPage extends WebOperations{
 
 	//private static Logger log = Logger.getLogger(Account_LookUpPage.class);
 

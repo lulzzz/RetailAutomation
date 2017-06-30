@@ -6,7 +6,7 @@
     </listeners>
 	<test name="Build_Test">
 		<parameter name="browser" value="chrome" />
-		<parameter name="environment" value="breitling" />
+		<parameter name="environment" value="stg" />
 		<parameter name="exeMode" value="local" />
 		<classes>
 			<class name="com.retail.testng.runners.BuildTest" />

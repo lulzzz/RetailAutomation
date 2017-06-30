@@ -1,11 +1,11 @@
 Feature: Journey
 
-As an agent,I need to support customer for shopping XFINITY Mobile products and plans.
+As an agent, I need to support customer for shopping XFINITY Mobile products and plans.
 
 Background: 
 Given I launch the Retail application as an agent
 
-@chamu
+@sanity	@ACMEScan
 Scenario: Placing a single ACME device in store order through Scan option
 		Given agent looks for an eligible customer details
 		And agent scans the device
@@ -15,7 +15,7 @@ Scenario: Placing a single ACME device in store order through Scan option
 		When agent submits the order 
 #		Then agent sees the order confirmation
 
-@chamu2
+@sanity	@AndroidScan
 Scenario: Placing a single Android device in store order through Scan option
 		Given agent looks for an eligible customer details
 		And agent scans the device
@@ -25,7 +25,7 @@ Scenario: Placing a single Android device in store order through Scan option
 		When agent submits the order 
 #		Then agent sees the order confirmation
 
-@chamu1
+@sanity	@AndroidShipOrder
 Scenario: Placing an ANDROID single device in store order through Verify Link option
 		Given agent navigates to 'verify' link to shop for a device
      	When agent chooses a specific device
@@ -35,7 +35,7 @@ Scenario: Placing an ANDROID single device in store order through Verify Link op
 		And agent provides digital signature and accepts to T&C
 		When agent submits the order 
 #		Then agent sees the order confirmation
-
+@sanity	@ACMEShiporder
 Scenario: Placing an ACME single device in store order through Verify Link option
 		Given agent navigates to 'verify' link to shop for a device
      	When agent chooses a specific device

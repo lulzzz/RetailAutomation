@@ -6,19 +6,19 @@ import org.openqa.selenium.interactions.Actions;
 import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
 import cucumber.api.java.en.*;
-import com.retail.pageObjects.Customer_MoreInfoPage;
+import com.retail.pageObjects.CustomerInfoPage;
 
-public class Customer_MoreInfo extends Customer_MoreInfoPage{
+public class CustomerInfo extends CustomerInfoPage{
 
-	private static Logger log = Logger.getLogger(Customer_MoreInfo.class);	
+	private static Logger log = Logger.getLogger(CustomerInfo.class);	
 	
 	@When("^I give valid date or month and click submit$")	
-	public void enterValidDOB()  {
+	public void enterValidDOB() throws Exception {
 		try {
 			ExtentReporter.reportStep("BDD Step: When I give valid date or month and click submit", "INFO");
-			if(isElementDisplayed(Customer_MoreInfoPage.dobField,5000))
+			if(isElementDisplayed(CustomerInfoPage.dobField,10))
 			{
-				clickElement(Customer_MoreInfoPage.dobField);				
+				clickElement(CustomerInfoPage.dobField);				
 				Actions action = new Actions(getDriver());					
 				action.sendKeys("06/06/1985").perform();
 				log.info("DOB is entered");					
@@ -27,42 +27,45 @@ public class Customer_MoreInfo extends Customer_MoreInfoPage{
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in CustomerMoreInfo_enterSSNDOB(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}	
 	
 	@When("^I give valid SSN and click submit$")
-	public void enterValidSSN() {
+	public void enterValidSSN() throws Exception{
 		try {			
 			ExtentReporter.reportStep("BDD Step: When I give valid SSN and click submit", "INFO");
-			if(isElementDisplayed(Customer_MoreInfoPage.ssnField,5000))
+			if(isElementDisplayed(CustomerInfoPage.ssnField,10))
 			{
-				clickElement(Customer_MoreInfoPage.ssnField);
-				typeValue(Customer_MoreInfoPage.ssnField,getXMLData("SSN"));				
+				clickElement(CustomerInfoPage.ssnField);
+				typeValue(CustomerInfoPage.ssnField,getXMLData("SSN"));				
 				log.info("SSN is entered");	
 			}
 			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in CustomerMoreInfo_enterValidSSN(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}	
 	
 	@When("^I click submit$")	
-	public void clickSubmit()  {
+	public void clickSubmit() throws Exception {
 		try {		
 			ExtentReporter.reportStep("BDD Step: When I click submit", "INFO");
 				//Click on Submit
-			clickElement(Customer_MoreInfoPage.submitBtn);
+			clickElement(CustomerInfoPage.submitBtn);
 			log.info("Clicked on Submit button");
 				
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in CustomerMoreInfo_clickSubmit(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}
 	
 	@When("^I select valid lines and click submit$")	
-	public void selectValidLines()  {
+	public void selectValidLines() throws Exception {
 		try {		
 				ExtentReporter.reportStep("BDD Step: When I select valid lines and click submit", "INFO");
 				//Selection of number of lines			
@@ -71,9 +74,9 @@ public class Customer_MoreInfo extends Customer_MoreInfoPage{
 				if(number_of_lines.equalsIgnoreCase("Just Accessories"))
 				{				
 					log.info("Selected Just Accessories Option");
-					clickElement(Customer_MoreInfoPage.justAccessories);					
+					clickElement(CustomerInfoPage.justAccessories);					
 				}else{
-					clickElement(Customer_MoreInfoPage.singleLine);					
+					clickElement(CustomerInfoPage.singleLine);					
 				}						
 				//Click on Submit
 				clickSubmit();
@@ -81,6 +84,7 @@ public class Customer_MoreInfo extends Customer_MoreInfoPage{
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in CustomerMoreInfo_selectValidLines(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}	
 	

@@ -17,41 +17,44 @@ public class Signature extends SignaturePage{
 
 	private static Logger log = Logger.getLogger(Signature.class);
 	
-	Customer_PreSignature custPreSignObj= new Customer_PreSignature();
+	CustomerPreSignature custPreSignObj= new CustomerPreSignature();
 	
 //CheckOut for a customer
 @When("^I check the check box for I agree to use electronic records and signatures$")	
-	public  void checkAgreement()  {
+	public  void checkAgreement() throws Exception {
 		try {
 			clickElement(SignaturePage.agreementSelect);
 		 log.info("Agreement is selected");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}	
 @Then("^I see the Continue button is enabled$")	
-	public  void checkContinue()  {
+	public  void checkContinue() throws Exception {
 		try {
-			isElementDisplayed(SignaturePage.continue_button,5000);
+			isElementDisplayed(SignaturePage.continue_button,10);
 		    log.info("Continue button is enabled");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}	
 @Then("^I click continue$")	
-	public  void clickContinue_Signature()  {
+	public  void clickContinue_Signature() throws Exception {
 		try {
 		    clickElement(SignaturePage.continue_button);
 		    log.info("Continue button is clicked");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}
 @When("^I select continue and click sign$")	
-	public  void clickSign_Signature()  {
+	public  void clickSign_Signature() throws Exception {
 		try {
 		    clickElement(SignaturePage.signature_tab);
 		    clickElement(SignaturePage.draw);
@@ -59,6 +62,7 @@ public class Signature extends SignaturePage{
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}
 
@@ -98,6 +102,7 @@ public class Signature extends SignaturePage{
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}
 }

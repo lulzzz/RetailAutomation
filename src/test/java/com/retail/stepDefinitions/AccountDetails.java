@@ -4,31 +4,32 @@ import org.apache.log4j.Logger;
 
 import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
-import com.retail.pageObjects.Account_DetailsPage;
+import com.retail.pageObjects.AccountDetailsPage;
 
 import cucumber.api.java.en.*;
 
-public class Account_Details extends Account_DetailsPage{
+public class AccountDetails extends AccountDetailsPage{
 
-	private static Logger log = Logger.getLogger(Account_Details.class);	
+	private static Logger log = Logger.getLogger(AccountDetails.class);	
 	
 	//Looks up for customer details
 	@When("^I click Launch Mobile$")	
-	public void launchMobile()  {
+	public void launchMobile() throws Exception {
 		try {
 			ExtentReporter.reportStep("BDD Step: When I click Launch Mobile", "INFO");
-			if(isElementDisplayed(Account_DetailsPage.manageMobileLink,5000))
+			if(isElementDisplayed(AccountDetailsPage.manageMobileLink,5))
 			{								
-				clickElement(Account_DetailsPage.launchMobileRtBtn);
+				clickElement(AccountDetailsPage.launchMobileRtBtn);
 			}else
 			{						
-				clickElement(Account_DetailsPage.launchMobileBtn);	
+				clickElement(AccountDetailsPage.launchMobileBtn);	
 			}				
 			log.info("Clicked on Launch Mobile");					
 								
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Account_Details_launchMobile(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
+			throw(e);
 		}
 	}	
 	

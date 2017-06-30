@@ -24,35 +24,24 @@ public class Hooks extends WebDriverManager {
 		try {
 			String scenarioName = scenario.getName();
 			LogUtils.startTest(scenarioName);
-			RemoteWebDriver driver;
-			if (getExeMode().equalsIgnoreCase("remote") || getExeMode().equalsIgnoreCase("grid")) {
-				log.info("getting remote driver for: " + getBrowser());
-				driver = WebDriverManager.createRemoteDriver(getBrowser());
-			} else {
-				log.info("getting driver for: " + getBrowser());
-				driver = WebDriverManager.createLocalDriver(getBrowser());
-			}
+			RemoteWebDriver driver=invokeDriver(getBrowser(), getExeMode());
 			WebDriverManager.setWebDriver(driver);
-			log.info("Done! Created " + getBrowser() + " driver!");
-
 			String temp = scenario.getId();
 			String[] tempArr = temp.split(";");
 			String featureName = tempArr[0];
-			if (tempArr.length == 2)
-				startExtentTestReport(scenarioName + "_" + getEnvironment() + "_" + getBrowser(),
-						"Feature Name: " + featureName + "<br>Scenario Name: " + scenarioName + "<br>Environment: "
-								+ getEnvironment() + "<br>Browser: " + getBrowserInfo());
-			else {
+			String extentScenario, extentDescription;
+			if (tempArr.length == 2){
+				extentScenario = scenarioName + "_" + getEnvironment() + "_" + getBrowser();
+				extentDescription = "Feature Name: " + featureName + "<br>Scenario Name: " + scenarioName + "<br>Environment: " + WebDriverManager.getEnvironment() + "<br>Browser: " + getBrowserInfo();
+			}else {
 				int iterationNo = Integer.parseInt(tempArr[tempArr.length - 1]);
-				startExtentTestReport(
-						iterationNo - 1 + ". " + scenarioName + "_" + getEnvironment() + "_" + getBrowser(),
-						"Feature Name: " + featureName + "<br>Scenario Name: " + scenarioName + "<br>Environment: "
-								+ getEnvironment() + "<br>Browser: " + getBrowserInfo());
+				extentScenario=iterationNo - 1 + ". " + scenarioName + "_" + getEnvironment() + "_" + getBrowser();
+				extentDescription="Feature Name: " + featureName + "<br>Scenario Name: " + scenarioName + "<br>Environment: " + getEnvironment() + "<br>Browser: " + getBrowserInfo();
 			}
+			startExtentTestReport(extentScenario, extentDescription);
 			log.info("Executing scenario: " + scenarioName);
 			DataProvider.loadXMLData("./src/test/resources/testData/xmlData.xml", scenarioName);
-			DataProvider.loadExcelData("./src/test/resources/testData/TestData.xlsx", "testData", scenarioName);
-			
+			DataProvider.loadExcelData("./src/test/resources/testData/TestData.xlsx", "testData", scenarioName);		
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 import com.framework.wrapper.WebOperations;
 
-public class Device_ConfigPage extends WebOperations{
+public class DeviceConfigPage extends WebOperations{
 
 	//private static Logger log = Logger.getLogger(Account_LookUpPage.class);
 

@@ -11,7 +11,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue={"com.retail.stepDefinitions"}
-		,tags={"@chamu"}
+		,tags={"@ACMEScan"}
 		,monochrome=true
 		,format={"pretty","json:reports/cucumber/json/json-report.json", "html:reports/cucumber/html/html-report.html"}
 		)

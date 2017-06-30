@@ -4,7 +4,7 @@ package com.retail.pageObjects;
 import org.openqa.selenium.By;
 import com.framework.wrapper.WebOperations;
 
-public class Device_BrandPage extends WebOperations{
+public class DeviceBrandPage extends WebOperations{
 
 	//private static Logger log = Logger.getLogger(Account_LookUpPage.class);
  public static By
