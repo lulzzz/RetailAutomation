@@ -68,18 +68,20 @@ public class CustomerInfo extends CustomerInfoPage{
 	public void selectValidLines() throws Exception {
 		try {		
 				ExtentReporter.reportStep("BDD Step: When I select valid lines and click submit", "INFO");
-				//Selection of number of lines			
+				//Selection of number of lines	
 				String number_of_lines= getXMLData("NumberOfLines").toUpperCase();
 				log.info(number_of_lines);
-				if(number_of_lines.equalsIgnoreCase("Just Accessories"))
-				{				
-					log.info("Selected Just Accessories Option");
-					clickElement(CustomerInfoPage.justAccessories);					
-				}else{
-					clickElement(CustomerInfoPage.singleLine);					
-				}						
-				//Click on Submit
-				clickSubmit();
+				if(isElementDisplayed(CustomerInfoPage.singleLine,5)){
+					if(number_of_lines.equalsIgnoreCase("Just Accessories"))
+					{				
+						log.info("Selected Just Accessories Option");
+						clickElement(CustomerInfoPage.justAccessories);					
+					}else{
+						clickElement(CustomerInfoPage.singleLine);					
+					}	
+					}
+					//Click on Submit
+					clickSubmit();
 			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in CustomerMoreInfo_selectValidLines(): " + LogUtils.logStackTrace(e));

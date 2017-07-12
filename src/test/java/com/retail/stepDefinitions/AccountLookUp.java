@@ -5,6 +5,7 @@ import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
 import com.framework.wrapper.*;
 import com.retail.pageObjects.AccountLookUpPage;
+import com.retail.pageObjects.CustomerInfoPage;
 
 import cucumber.api.java.en.*;
 
@@ -85,10 +86,45 @@ public class AccountLookUp extends AccountLookUpPage{
 			clickOnLookUp();
 			acctDetailsPageLaunch();
 			acctDetailsObj.launchMobile();
+			if(isElementDisplayed(CustomerInfoPage.dobField,10))
+			{
 			custMoreInfoObj.enterValidDOB();	
 			custMoreInfoObj.enterValidSSN();
 			custMoreInfoObj.selectValidLines();
+			}
 		}catch (Exception e) {
+			log.error("GOT EXCEPTION in Account_LookUp_customerLookup(): " + LogUtils.logStackTrace(e));
+			e.printStackTrace();
+			throw(e);
+		}
+	}
+	@Given("^agent looks for an eligible customer with no active lines$")	
+	public void customerLookup_noactivelines()  throws Exception{
+		try {
+			ExtentReporter.reportStep("BDD Step: Given agent looks for an eligible customer with no active lines", "INFO");
+//			Thread.sleep(4000);
+			enterValidAcctNumber();
+			clickOnLookUp();
+			acctDetailsPageLaunch();
+			acctDetailsObj.launchMobile();
+		
+//			if(isElementDisplayed(CustomerInfoPage.existing_lines,5)){
+//				System.out.println("Active lines are present in this account");
+//				log.info("Active lines are present in this account");
+//			    System.exit(0);
+//			}
+//			else
+//			{
+//				System.out.println("No active lines in this account");
+//			}
+            if(isElementDisplayed(CustomerInfoPage.dobField,5))
+            {
+			custMoreInfoObj.enterValidDOB();	
+			custMoreInfoObj.enterValidSSN();
+			custMoreInfoObj.selectValidLines();
+            }
+		} 
+		catch (Exception e) {
 			log.error("GOT EXCEPTION in Account_LookUp_customerLookup(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
 			throw(e);

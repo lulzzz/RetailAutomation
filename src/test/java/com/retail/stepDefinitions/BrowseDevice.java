@@ -14,11 +14,22 @@ public class BrowseDevice extends BrowseDevicePage{
 	
 @When("^Click on any Device in catalog$")	
 	public void selectDevice_Verify()  throws Exception{
-		try {
-			ExtentReporter.reportStep("BDD Step: When Click on any Device in catalog", "INFO");
-			String deviceName=getXMLData("Device_Name");
-		     BrowseDevicePage.selectDevice(deviceName);
-		     log.info("Click on any Device");
+		try 
+		{
+			String flag=getXMLData("flag");
+				System.out.println(flag);
+				if(flag.equals("H"))
+				{
+				ExtentReporter.reportStep("BDD Step: When Click on any Device in catalog", "INFO");
+				String deviceName=getXMLData("Device_Name"+DeviceSearch.device_count);
+			     BrowseDevicePage.selectDevice(deviceName);
+			     log.info("Click on any Device");
+				}
+				if(flag.equals("S")){
+					String deviceName=getXMLData("Device_Name");
+				     BrowseDevicePage.selectDevice(deviceName);
+				     log.info("Click on any Device");
+				}
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Device_Brand(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
@@ -28,10 +39,11 @@ public class BrowseDevice extends BrowseDevicePage{
 @And("^Select Color$")	
 public void selectColor_Verify()  throws Exception{
 	try {
-		ExtentReporter.reportStep("BDD Step: And Select Color", "INFO");
+		ExtentReporter.reportStep("BDD Step: And Select Color", "INFO");		
 		//String deviceColor=getXMLData("Color");
 	    // Browse_DevicePage.selectColor(deviceColor);
-		clickElement(BrowseDevicePage.deviceColor);
+		wait(5000);
+		//clickElement(BrowseDevicePage.deviceColor);
 	}catch (Exception e) {
 		log.error("GOT EXCEPTION in Device_Brand(): " + LogUtils.logStackTrace(e));
 		e.printStackTrace();
@@ -41,9 +53,18 @@ public void selectColor_Verify()  throws Exception{
 @And("^Select Storage$")	
 public void selectStorage_Verify() throws Exception {
 	try {
+		String flag=getXMLData("flag");		
+		if(flag.equals("H"))
+		{
 		ExtentReporter.reportStep("BDD Step: And Select Storage", "INFO");
-		String deviceCapacity=getXMLData("Capacity");
+		String deviceCapacity=getXMLData("Capacity"+DeviceSearch.device_count);
 	     BrowseDevicePage.selectCapacity(deviceCapacity);
+		}
+		if(flag.equals("S")){
+			ExtentReporter.reportStep("BDD Step: And Select Storage", "INFO");
+			String deviceCapacity=getXMLData("Capacity");
+		     BrowseDevicePage.selectCapacity(deviceCapacity);
+		}
 	}catch (Exception e) {
 		log.error("GOT EXCEPTION in Device_Brand(): " + LogUtils.logStackTrace(e));
 		e.printStackTrace();
@@ -54,7 +75,7 @@ public void selectStorage_Verify() throws Exception {
 public void verifyTotalAmount() throws Exception {
 	try {
 		 ExtentReporter.reportStep("BDD Step: Then Verify total amount", "INFO");
-	     checkElement(BrowseDevicePage.Total);
+	     //checkElement(BrowseDevicePage.Total);
 	     
 	}catch (Exception e) {
 		log.error("GOT EXCEPTION in Device_Brand(): " + LogUtils.logStackTrace(e));
@@ -66,7 +87,16 @@ public void verifyTotalAmount() throws Exception {
 public void clickSelect() throws Exception {
 	try {
 		ExtentReporter.reportStep("BDD Step: Then Click on Select", "INFO");
-	     clickElement(BrowseDevicePage.deviceSelect);	     
+		System.out.println("Click on Select");
+		if(getXMLData("NumberOfLines").contains("Accessories"))
+		{	
+			System.out.println("If part");
+			clickElement(BrowseAccessoryPage.accessorySelectBtn);
+		}else
+		{
+			System.out.println("Else part");
+			clickElement(BrowseDevicePage.deviceSelect);
+		}
 	}catch (Exception e) {
 		log.error("GOT EXCEPTION in Device_Brand(): " + LogUtils.logStackTrace(e));
 		e.printStackTrace();

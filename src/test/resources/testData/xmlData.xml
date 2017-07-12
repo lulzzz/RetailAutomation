@@ -1,6 +1,7 @@
 <testcases>
 	<testcase name="Placing a single ACME device in store order through Scan option">
-		<property name="AccountNumber" value="8069100020038930" />		
+		<property name="AccountNumber" value="8069100020038930" />	
+		<property name="flag" value="S" />	
 		<property name="ID_Validation" value="Driver License" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
@@ -23,7 +24,8 @@
 		<property name="Ship_Flow" value="No" />
 	</testcase>
 	<testcase name="Placing a single Android device in store order through Scan option">
-		<property name="AccountNumber" value="8069100020038930" />		
+		<property name="AccountNumber" value="8299400280104584" />	
+		<property name="flag" value="S" />	
 		<property name="ID_Validation" value="State ID" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
@@ -48,6 +50,7 @@
 	<testcase name="Placing an ANDROID single device in store order through Verify Link option">
 		<property name="AccountNumber" value="8069100020038930" />		
 		<property name="ID_Validation" value="US Passport" />	
+		<property name="flag" value="S" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
@@ -64,15 +67,16 @@
 		<property name="CVV" value="123" />
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
-		<property name="Device_Name" value="Samsung Galaxy S8" />
+		<property name="Device_Name" value="Samsung Galaxy S8+" />
 		<property name="DeviceBrandName" value="Samsung" />
-		<property name="Capacity" value="SM-G950U-64gb" />
-		<property name="Color" value="Orchid Gray" />
+		<property name="Capacity" value="SM-G955U-64gb" />
+		<property name="Color" value="Arctic Silver" />
 		<property name="Ship_Flow" value="Yes" />
 	</testcase>
 	<testcase name="Placing an ACME single device in store order through Verify Link option">
 		<property name="AccountNumber" value="8069100020038930" />		
 		<property name="ID_Validation" value="Driver License" />	
+		<property name="flag" value="S" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
@@ -92,7 +96,213 @@
 		<property name="Device_Name" value="Apple iPhone 7 Plus" />
 		<property name="DeviceBrandName" value="Apple" />
 		<property name="Capacity" value="A1661-32gb" />
-		<property name="Color" value="Orchid Gray" />
+		<property name="Color" value="Gold" />
 		<property name="Ship_Flow" value="Yes" />
+	</testcase>
+
+	<testcase name="Placing just accessory through Verify Link option">
+		<property name="AccountNumber" value="8155100360288835" />		
+		<property name="ID_Validation" value="State ID" />	
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="Just Accessories" />		
+		<property name="DOB" value="1985" />
+		<property name="AccessoryCategory" value="audio" />
+		<property name="AccessoryName" value="Beats urBeats" />
+		<property name="Color" value="Space Gray" />
+	</testcase>
+	
+	<testcase name="Placing just accessory without existing device ship flow option">
+		<property name="AccountNumber" value="8155100524663428" />		
+		<property name="ID_Validation" value="US Passport" />	
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="Just Accessories" />		
+		<property name="DOB" value="1985" />
+		<property name="AccessoryCategory" value="audio" />		
+	</testcase>
+	
+	<testcase name="Placing hybrid devices in store order-Scan">
+		<property name="AccountNumber" value="8778106040184416" />	
+		<property name="flag" value="H" />	
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="2" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber1" value="354956073094943" />	
+		<property name="SIMnumber1" value="73461234613846384713" />	
+		<property name="IMEInumber2" value="359463070026544" />	
+		<property name="SIMnumber2" value="73461234613846384313" />	
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="PaymentPlan2" value="Pay In Full" />
+		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DataOption2" value="Unlimited" />	
+		<property name="ChooseNumber1" value="Get New Number" />	
+		<property name="ChooseNumber2" value="Get New Number" />			
+		<property name="CurrentPhoneNumber1" value="5419670010" />
+		<property name="CurrentPhoneNumber2" value="5419670020" />
+		<property name="Name1" value="Xfinity1" />
+	   <property name="Name2" value="Xfinity2" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+	</testcase>
+	
+	<testcase name="Placing 5 devices in store order for first-time user through scan">
+		<property name="AccountNumber" value="8155100524663428" />	
+		<property name="flag" value="H" />	
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="2" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber1" value="354956073094943" />	
+		<property name="IMEInumber2" value="359463070026544" />	
+		<property name="IMEInumber3" value="357811113984941" />	
+		<property name="IMEInumber4" value="357811113984931" />	
+		<property name="IMEInumber5" value="357811113984951" />	
+		<property name="SIMnumber1" value="73461234613846384723" />
+		<property name="SIMnumber2" value="73461234613846384713" />
+		<property name="SIMnumber3" value="73461234613846384733" />
+		<property name="SIMnumber4" value="73461234613846384743" />	
+		<property name="SIMnumber5" value="73461234613846384753" />
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="PaymentPlan2" value="Pay In Full" />
+		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DataOption2" value="Unlimited" />
+		<property name="PaymentPlan3" value="Pay In Full" />
+		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DataOption3" value="Unlimited" />	
+		<property name="PaymentPlan4" value="Pay In Full" />
+		<property name="DeviceProtection4" value="withXMPP" />	
+		<property name="DataOption4" value="Unlimited" />	
+		<property name="PaymentPlan5" value="Pay In Full" />
+		<property name="DeviceProtection5" value="withXMPP" />	
+		<property name="DataOption5" value="Unlimited" />		
+		<property name="ChooseNumber1" value="Get New Number" />	
+		<property name="ChooseNumber2" value="Get New Number" />
+		<property name="ChooseNumber3" value="Get New Number" />
+		<property name="ChooseNumber4" value="Get New Number" />
+		<property name="ChooseNumber5" value="Get New Number" />			
+		<property name="CurrentPhoneNumber1" value="5419670010" />
+		<property name="CurrentPhoneNumber2" value="5419670020" />
+		<property name="CurrentPhoneNumber3" value="5419670020" />
+		<property name="CurrentPhoneNumber4" value="5419670020" />
+		<property name="CurrentPhoneNumber5" value="5419670020" />
+		<property name="Name1" value="Xfinity1" />
+	   <property name="Name2" value="Xfinity2" />
+	   <property name="Name3" value="Xfinity3" />
+	   <property name="Name4" value="Xfinity4" />
+	   <property name="Name5" value="Xfinity5" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+	</testcase>
+	
+	<testcase name="Placing 5 devices in store order for first-time user through verify">
+	     <property name="flag" value="H" />	
+		<property name="AccountNumber" value="8155100524663428" />		
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="PaymentPlan2" value="Pay In Full" />
+		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DataOption2" value="Unlimited" />
+		<property name="PaymentPlan3" value="Pay In Full" />
+		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DataOption3" value="Unlimited" />	
+		<property name="PaymentPlan4" value="Pay In Full" />
+		<property name="DeviceProtection4" value="withXMPP" />	
+		<property name="DataOption4" value="Unlimited" />	
+		<property name="PaymentPlan5" value="Pay In Full" />
+		<property name="DeviceProtection5" value="withXMPP" />	
+		<property name="DataOption5" value="Unlimited" />		
+		<property name="ChooseNumber1" value="Get New Number" />	
+		<property name="ChooseNumber2" value="Get New Number" />
+		<property name="ChooseNumber3" value="Get New Number" />
+		<property name="ChooseNumber4" value="Get New Number" />
+		<property name="ChooseNumber5" value="Get New Number" />			
+		<property name="CurrentPhoneNumber1" value="5419670010" />
+		<property name="CurrentPhoneNumber2" value="5419670020" />
+		<property name="CurrentPhoneNumber3" value="5419670020" />
+		<property name="CurrentPhoneNumber4" value="5419670020" />
+		<property name="CurrentPhoneNumber5" value="5419670020" />
+		<property name="Name1" value="Xfinity1" />
+		<property name="Name2" value="Xfinity2" />
+		<property name="Name3" value="Xfinity3" />
+		<property name="Name4" value="Xfinity4" />
+		<property name="Name5" value="Xfinity5" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+		<property name="Device_Name1" value="Apple iPhone 7 Plus" />
+		<property name="Device_Name2" value="Samsung Galaxy S7" />
+		<property name="Device_Name3" value="Apple iPhone 7" />
+		<property name="Device_Name4" value="Modesto TEST Galaxy S7" />
+        <property name="Device_Name5" value="LG X power" /> 
+		<property name="DeviceBrandName1" value="Apple" />
+		<property name="DeviceBrandName2" value="Samsung" />
+		<property name="DeviceBrandName3" value="Apple" />
+		<property name="DeviceBrandName4" value="Modesto" />
+		<property name="DeviceBrandName5" value="LG" />
+		<property name="Capacity1" value="A1661-32gb" />
+		<property name="Capacity2" value="SM-G950U-64gb" />
+		<property name="Capacity3" value="A1660-32gb" />
+		<property name="Capacity4" value="TESTPHONES-32 GB" />
+		<property name="Capacity5" value="LG-K212-16gb" />
+		</testcase>
+		<testcase name="Placing hybrid devices in store order-Verify">
+	     <property name="flag" value="H" />	
+		<property name="AccountNumber" value="8069100020038930" />		
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="PaymentPlan2" value="Pay In Full" />
+		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DataOption2" value="Unlimited" />	
+		<property name="ChooseNumber1" value="Get New Number" />	
+		<property name="ChooseNumber2" value="Get New Number" />			
+		<property name="CurrentPhoneNumber1" value="5419670010" />
+		<property name="CurrentPhoneNumber2" value="5419670020" />
+		<property name="Name1" value="Xfinity1" />
+		<property name="Name2" value="Xfinity2" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+		<property name="Device_Name1" value="Apple iPhone 7 Plus" />
+		<property name="Device_Name2" value="Samsung Galaxy S8" />
+		<property name="DeviceBrandName1" value="Apple" />
+		<property name="DeviceBrandName2" value="Samsung" />
+		<property name="Capacity1" value="A1661-128gb" />
+		<property name="Capacity2" value="SM-G950U-64gb" />
 </testcase>
 </testcases>

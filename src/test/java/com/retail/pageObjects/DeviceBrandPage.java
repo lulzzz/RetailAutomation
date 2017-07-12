@@ -9,17 +9,23 @@ public class DeviceBrandPage extends WebOperations{
 	//private static Logger log = Logger.getLogger(Account_LookUpPage.class);
  public static By
  
- PhoneByBrand = By.xpath("//h2[@_ngcontent-c13=''][text()='Phones by Brand']");
+ PhoneByBrand = By.xpath("//h2[text()='Phones by Brand']");
 
 
 	public static void selectDeviceBrand(String deviceName) 
 	{
 		System.out.println(deviceName);
-		By deviceSelect = By.xpath("//a[@_ngcontent-c13=''][text()='"+deviceName+"']");
+		By deviceSelect = By.xpath("//a[text()='"+deviceName+"']");
 		clickElement(deviceSelect);
-		System.out.println(deviceSelect);
 	}
-		}			
+	
+	public static void selectAccessoryCategory(String accessoryName) {
+		System.out.println(accessoryName);
+		By accesorySelect = By.xpath("//a[text()='"+accessoryName+"']");
+		clickElement(accesorySelect);
+		
+	}
+}			
 					
 							
 	

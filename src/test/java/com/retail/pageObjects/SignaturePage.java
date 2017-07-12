@@ -10,13 +10,13 @@ public class SignaturePage extends WebOperations{
 
 	public static By 
 
-	agreementSelect=By.xpath("//INPUT[@id='disclosureAccepted']"),
-	continue_button=By.xpath("//SPAN[@class='continue-button-wrapper']"),
-	signature_tab=By.xpath("//DIV[@class='signature-tab-content']"),
-	draw=By.xpath("//BUTTON[@data-qa='adopt-draw'][text()='Draw']"),
-	adopt_Sign=By.xpath("//*[@id='adopt-dialog']/div/div[3]/button[1]"),
+	agreementSelect=By.xpath("//input[@id='disclosureAccepted']"),
+	continue_button=By.xpath("//span[@class='continue-button-wrapper']"),
+	signature_tab=By.xpath("//div[@class='signature-tab-content']"),
+	draw=By.xpath("//button[@aria-label='Draw']"),
+	adopt_Sign=By.xpath("//button[@value='signature']"),
 	wbCanvas=By.xpath("//*[@id='draw']/div/div/canvas"),
-	finishBtn= By.xpath("//*[@id='action-bar-btn-finish']");
+	finishBtn= By.xpath("//button[@id='action-bar-btn-finish']");
 	
 	
 }

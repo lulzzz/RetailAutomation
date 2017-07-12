@@ -31,7 +31,12 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 		try {
 			ExtentReporter.reportStep("BDD Step: When I see  same as service address is checked", "INFO");
 			Thread.sleep(5000);			
-			clickElement(CustomerPreSignaturePage.sameServiceAddress);			
+			String firstName = getDriver().findElement(CustomerPreSignaturePage.firstName).getAttribute("value");			
+			if((firstName.isEmpty()))
+		    {					
+				clickElement(CustomerPreSignaturePage.sameServiceAddress);
+		    }
+			//clickElement(CustomerPreSignaturePage.sameServiceAddress);			
 			log.info("Same as service address check box is checked");
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
@@ -92,13 +97,15 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 	public  void validCreditCardDetails() throws Exception {
 		try {			
 			ExtentReporter.reportStep("BDD Step: When I enter valid information for credit card details", "INFO");
-			if(checkElement(CustomerPreSignaturePage.edit_paymentAddress))
+			if(isElementDisplayed(CustomerPreSignaturePage.edit_paymentAddress,5000))
 			{				
 				log.info("Credit information is saved already");
 			}
-			else
+			if(!isElementDisplayed(CustomerPreSignaturePage.edit_paymentAddress,5000))
 			{
+			wait(5000);	
 			clickElement(CustomerPreSignaturePage.creditCardNumber);
+			System.out.println(getExcelData("CreditCardNumber"));
 	        typeValue(CustomerPreSignaturePage.creditCardNumber,getExcelData("CreditCardNumber"));
 	        clickElement(CustomerPreSignaturePage.expiration);
 	        typeValue(CustomerPreSignaturePage.creditCardNumber,getExcelData("Expiration"));
@@ -132,7 +139,7 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 			{
 			log.info("Contact information is saved already");
 			}
-			else{
+			if(!isElementDisplayed(CustomerPreSignaturePage.edit_contactInfo,10)){
 				  	clickElement(CustomerPreSignaturePage.Email_Address);
 			        getDriver().findElement(CustomerPreSignaturePage.Email_Address).clear();
 			        typeValue(CustomerPreSignaturePage.Email_Address,getExcelData("Email_Address"));

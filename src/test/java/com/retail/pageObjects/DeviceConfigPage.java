@@ -10,13 +10,13 @@ public class DeviceConfigPage extends WebOperations{
 	//private static Logger log = Logger.getLogger(Account_LookUpPage.class);
 
 	public static By 
-	pay_in_full = By.xpath("(//LABEL[@_ngcontent-c7=''])[1]"),
-	pay_monthly = By.xpath("(//LABEL[@_ngcontent-c7=''])[2]"),
-	XMPP = By.xpath("(//LABEL[@_ngcontent-c7=''])[3]"),
-	noXMPP = By.xpath("(//LABEL[@_ngcontent-c7=''])[4]"),
-	unlimited = By.xpath("(//LABEL[@_ngcontent-c7=''])[5]"),
-	by_the_gig = By.xpath("(//LABEL[@_ngcontent-c7=''])[6]"),
-	nextbutton = By.xpath("/html/body/my-app/main/my-device-options/div/div[2]/div[3]/div/my-btn[2]/button");	
+	pay_in_full = By.xpath("//span[text()='Pay In Full']"),
+    pay_monthly = By.xpath("//span[text()='Pay Monthly']"),
+    XMPP = By.xpath("//span[text()='Xfinity Mobile Protection Plan (XMPP)']"),
+    noXMPP = By.xpath("//span[text()='No Xfinity Mobile Protection Plan (XMPP)']"),
+    unlimited = By.xpath("//span[text()='Unlimited']"),
+    by_the_gig = By.xpath("//span[text()='By the Gig']"),
+    nextbutton = By.xpath("//button[text()='Next']");	
 		}			
 					
 							

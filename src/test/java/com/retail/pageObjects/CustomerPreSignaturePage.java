@@ -10,7 +10,7 @@ public class CustomerPreSignaturePage extends WebOperations{
 
 	public static By 
 
-	estimatedChargesToday= By.xpath("//SPAN[@_ngcontent-c4=''][2]"),
+	estimatedChargesToday= By.xpath("//*[@class='col-xs']/my-btn/button"),
 	sameServiceAddress= By.xpath("//*[@class='address-checkbox']/span"),
 	firstName= By.xpath("//label[contains(text(),'First Name')]/input"),
 	lastName= By.xpath("//label[contains(text(),'Last Name')]/input"),
@@ -18,23 +18,26 @@ public class CustomerPreSignaturePage extends WebOperations{
 	address2= By.xpath("(//INPUT[@_ngcontent-c5=''])[4]"),
 	city= By.xpath("//label[contains(text(),'City')]/input"),
 	zipcode= By.xpath("//label[contains(text(),'Zip Code')]/input"),
-	save_billingAddress= By.xpath("//my-address/div/form/div[6]/my-btn/button"),	
-	updateAddressRecommended= By.xpath("/html/body/my-app/main/my-customer-pre-signature/div/div[2]/div[1]/my-address/ngb-modal-window/div/div/my-address-recommendation/div[2]/div/div/div[2]"),
-	update_billingAddress= By.xpath("/html/body/my-app/main/my-customer-pre-signature/div/div[2]/div[1]/my-address/ngb-modal-window/div/div/my-address-recommendation/div[3]/my-btn[2]/button"),
+	save_billingAddress= By.xpath("//div[@class='button-container']/my-btn/button"),	
+	updateAddressRecommended= By.cssSelector(".col-xs.text-left.recommended"),
+	update_billingAddress= By.xpath("//div[@class='modal-footer']/my-btn[2]/button"),
 	edit_billingAddress= By.xpath("/html/body/my-app/main/my-customer-pre-signature/div/div[2]/div[1]/my-address/div/my-btn/button"),
 	creditCardNumber= By.xpath("//*[@id='cardNumber']"),
 	expiration= By.xpath("//*[@id='expiration']"),
 	cvv= By.xpath("//*[@id='cvv']"),
-	save_creditCard= By.xpath("(//button[@_ngcontent-c5=''])[4][text()='Save']"),
+	save_creditCard= By.xpath("/div[@class='button-container non-modal-position']/my-btn[2]/button"),
 	edit_paymentAddress= By.xpath("//my-customer-billing-info/div[1]/div/div/my-btn/button[1]"),
 	Email_Address= By.xpath("(//INPUT[@_ngcontent-c12=''])[1]"),
 	phone_Number= By.xpath("(//INPUT[@_ngcontent-c12=''])[2]"),
-	save_contactInfo= By.xpath("(//button[@_ngcontent-c5=''])[6][text()='Save']"),
+	save_contactInfo= By.xpath("//div[@class='button-container']/my-btn/button"),
 	edit_contactInfo= By.xpath("//my-customer-contact/div/my-btn/button"),
-	verify_info= By.xpath("//*[@class='final-verify-checkbox']"),
-	collect_signature= By.xpath("//my-customer-signature-link/div[1]/div[2]/my-btn/button[1]"),
+	verify_info= By.xpath("//span[@class='new-checkbox']"),
+	collect_signature= By.xpath("//div[@class='col-xs text-right']/my-btn/button"),
 	disclosureAccpeted= By.id("disclosureAccepted"),
 	state= By.xpath("//label[text()='State']/following-sibling::button"),
+	run_creditCheck= By.xpath("//button[text()='Run Credit Check']"),
+	close= By.xpath("//button[text()='Close']"),
+	approved_check= By.xpath("//p[text()='Tammy approved for up to 5']"),
 	placeOrderBtn=By.xpath("/html/body/my-app/main/my-customer-pre-signature/div/div[7]/my-btn[2]/button");	
 		
 }

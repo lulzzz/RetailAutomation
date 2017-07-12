@@ -10,12 +10,12 @@ public class DeviceCustomizePage extends WebOperations{
 
 	public static By 
 	
-	keep_number = By.xpath("/html/body/my-app/main/my-device-options/div/div[2]/div[1]/div/my-device-customize-pane/div/my-radio-btn/form/div/div[1]/label"),
-	get_new_num = By.xpath("/html/body/my-app/main/my-device-options/div/div[2]/div[1]/div/my-device-customize-pane/div/my-radio-btn/form/div/div[2]/label"),
-	current_phone_number = By.xpath("/html/body/my-app/main/my-device-options/div/div[2]/div[1]/div/my-device-customize-pane/div/form/div/div[1]/my-input/label/input"),
-	current_carrier = By.xpath("//*[@id='dropdown']"),
-	name = By.xpath("/html/body/my-app/main/my-device-options/div/div[2]/div[1]/div/my-device-customize-pane/div/div[2]/div/my-input/label/input"),
-	add_to_cart = By.xpath("/html/body/my-app/main/my-device-options/div/div[2]/div[3]/div/my-btn[2]/button");
-	
-	
+	keep_number = By.xpath("//label[@for='number1']"),
+	get_new_num = By.xpath("//label[@for='number2']"),
+	current_phone_number = By.xpath("//label[@class='control-label ']/input"),
+	current_carrier = By.xpath("//span[@id='dropdown']"),
+	AT_select=By.xpath("//*[contains(@id,'dropdown')][text()='AT&T']"),
+	name = By.xpath(" //label[@class='control-label all-caps']/input"),
+	add_to_cart = By.xpath("//button[@type='gocart']");
+		
 }
