@@ -2,6 +2,7 @@ package com.retail.stepDefinitions;
 
 import org.apache.log4j.Logger;
 
+import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
 import com.framework.wrapper.*;
 import com.retail.pageObjects.*;
@@ -192,6 +193,10 @@ public void dataplan()  {
 			{
 				clickElement(custPage.close);
 			}
+			else
+			{
+				System.exit(0);
+			}
 				}
 	}
 		catch(Exception e){
@@ -199,5 +204,23 @@ public void dataplan()  {
 			throw(e);
 		}
 	}
+	@When("^agent chooses data plan with number selection$")
+	public void deviceSelect() throws Exception
+	{
+		try{
+		paymentplan();
+		protectionplan();
+		dataplan();
+		nextdeviceconfig();	
+		deviceCustomizeObj.choosenumber();
+		deviceCustomizeObj.name();
+		deviceCustomizeObj.addtocart();
+		shopcart.verifyDeviceCharges();
+		}catch(Exception e){
+			e.printStackTrace();
+			throw(e);
+		}
+	}
+	
 
 }

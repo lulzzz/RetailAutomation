@@ -1,7 +1,9 @@
 package com.retail.stepDefinitions;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
@@ -16,6 +18,22 @@ public class CustomerInfo extends CustomerInfoPage{
 	public void enterValidDOB() throws Exception {
 		try {
 			ExtentReporter.reportStep("BDD Step: When I give valid date or month and click submit", "INFO");
+			if(isElementDisplayed(CustomerInfoPage.storeName,10))
+			{
+				clickElement(CustomerInfoPage.storeName);
+				typeValue(CustomerInfoPage.storeName,getXMLData("Store_Name"));
+				clickElement(CustomerInfoPage.storeNumber);
+				typeValue(CustomerInfoPage.storeNumber,getXMLData("Store_Number"));
+				clickElement(CustomerInfoPage.address);
+				typeValue(CustomerInfoPage.address,getXMLData("Address"));
+				clickElement(CustomerInfoPage.city);
+				typeValue(CustomerInfoPage.city,getXMLData("city"));
+				clickElement(CustomerInfoPage.state);
+				String state= getXMLData("state");
+				CustomerInfoPage.selectState(state);
+				clickElement(CustomerInfoPage.Zip);
+				typeValue(CustomerInfoPage.Zip,getXMLData("zipcode"));
+			}
 			if(isElementDisplayed(CustomerInfoPage.dobField,10))
 			{
 				clickElement(CustomerInfoPage.dobField);				
@@ -56,7 +74,12 @@ public class CustomerInfo extends CustomerInfoPage{
 				//Click on Submit
 			clickElement(CustomerInfoPage.submitBtn);
 			log.info("Clicked on Submit button");
-				
+//			if(isElementDisplayed(CustomerInfoPage.submitBtn,5))
+//			{
+//				clickElement(CustomerInfoPage.submitBtn);
+//				log.info("Clicked on Submit button for two times");
+//				
+//		}
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in CustomerMoreInfo_clickSubmit(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();

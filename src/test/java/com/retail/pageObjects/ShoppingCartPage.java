@@ -12,5 +12,6 @@ public class ShoppingCartPage extends WebOperations{
 	estimatedMonthlycost_shoppingcart=By.xpath("//div[text()='ESTIMATED MONTHLY']"),
 	continueToCheckout= By.xpath("//button[text()='Continue to Checkout']"),
 	add_AnotherLine  = By.xpath("//button[text()='Add Another Line']"),
+	add_Accessory = By.xpath("//button[text()='Add Accessories']"),
 	oneTimeCharge_shoppingcart=By.xpath("//div[text()='ONE TIME CHARGE']");
 }

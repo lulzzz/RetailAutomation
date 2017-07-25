@@ -67,5 +67,30 @@ public class ShoppingCart extends ShoppingCartPage{
 			e.printStackTrace();
 		}
 	}
+	@When("^I select Add Accessory$")
+	public  void add_Accessory()  {
+		try {
+	       ExtentReporter.reportStep("BDD Step: When I select Add Accessory", "INFO");
+			clickElement(ShoppingCartPage.add_Accessory);
+			ExtentReporter.reportStep(getDriver(), "Shopping_Page", "PASS", 1);
+			
+		}catch (Exception e) {
+			ExtentReporter.reportStep(getDriver(), "Shopping_Page", "Fail", 1);
+			log.error("GOT EXCEPTION in Shopping_cartPage():" + LogUtils.logStackTrace(e));
+			e.printStackTrace();
+		}
+	}
+	@Then("^I see the Browse Accessories Page$")
+	public void browseAccessories() throws Exception {
+		try {
+			verifyText("Accessories");
+			log.info("Navigated to Accessories Page");		
+		}
+		catch (Exception e) {
+			log.error("GOT EXCEPTION in Shopping_cartPage(): " + LogUtils.logStackTrace(e));
+			e.printStackTrace();
+			throw(e);
+		}
+	}
 	
 }

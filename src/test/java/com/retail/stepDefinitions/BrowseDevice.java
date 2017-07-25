@@ -17,7 +17,6 @@ public class BrowseDevice extends BrowseDevicePage{
 		try 
 		{
 			String flag=getXMLData("flag");
-				System.out.println(flag);
 				if(flag.equals("H"))
 				{
 				ExtentReporter.reportStep("BDD Step: When Click on any Device in catalog", "INFO");
@@ -39,10 +38,18 @@ public class BrowseDevice extends BrowseDevicePage{
 @And("^Select Color$")	
 public void selectColor_Verify()  throws Exception{
 	try {
-		ExtentReporter.reportStep("BDD Step: And Select Color", "INFO");		
-		//String deviceColor=getXMLData("Color");
-	    // Browse_DevicePage.selectColor(deviceColor);
-		wait(5000);
+		ExtentReporter.reportStep("BDD Step: And Select Color", "INFO");
+		String flag=getXMLData("flag");		
+		if(flag.equals("H"))
+		{
+		String deviceColor=getXMLData("Color"+DeviceSearch.device_count);
+	    BrowseDevicePage.selectColor(deviceColor);
+		}
+		if(flag.equals("S"))
+		{
+		String deviceColor=getXMLData("Color");
+	    BrowseDevicePage.selectColor(deviceColor);
+		}
 		//clickElement(BrowseDevicePage.deviceColor);
 	}catch (Exception e) {
 		log.error("GOT EXCEPTION in Device_Brand(): " + LogUtils.logStackTrace(e));

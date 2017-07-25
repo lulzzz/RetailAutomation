@@ -1,8 +1,14 @@
 <testcases>
 	<testcase name="Placing a single ACME device in store order through Scan option">
-		<property name="AccountNumber" value="8069100020038930" />	
+		<property name="AccountNumber" value="8069100010266707" />	
 		<property name="flag" value="S" />	
 		<property name="ID_Validation" value="Driver License" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
@@ -24,10 +30,16 @@
 		<property name="Ship_Flow" value="No" />
 	</testcase>
 	<testcase name="Placing a single Android device in store order through Scan option">
-		<property name="AccountNumber" value="8299400280104584" />	
+		<property name="AccountNumber" value="8069100010266707" />	
 		<property name="flag" value="S" />	
 		<property name="ID_Validation" value="State ID" />	
 		<property name="SSN" value="1111" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
 		<property name="DOB" value="1985" />
@@ -48,8 +60,14 @@
 		<property name="Ship_Flow" value="No" />
 	</testcase>
 	<testcase name="Placing an ANDROID single device in store order through Verify Link option">
-		<property name="AccountNumber" value="8069100020038930" />		
+		<property name="AccountNumber" value="8069100010266707" />		
 		<property name="ID_Validation" value="US Passport" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
 		<property name="flag" value="S" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
@@ -67,15 +85,21 @@
 		<property name="CVV" value="123" />
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
-		<property name="Device_Name" value="Samsung Galaxy S8+" />
+		<property name="Device_Name" value="Samsung Galaxy S7 edge" />
 		<property name="DeviceBrandName" value="Samsung" />
-		<property name="Capacity" value="SM-G955U-64gb" />
-		<property name="Color" value="Arctic Silver" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
 		<property name="Ship_Flow" value="Yes" />
 	</testcase>
 	<testcase name="Placing an ACME single device in store order through Verify Link option">
-		<property name="AccountNumber" value="8069100020038930" />		
+		<property name="AccountNumber" value="8069100020053467" />		
 		<property name="ID_Validation" value="Driver License" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
 		<property name="flag" value="S" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
@@ -95,14 +119,19 @@
 		<property name="Phone_Number" value="5467891234" />	
 		<property name="Device_Name" value="Apple iPhone 7 Plus" />
 		<property name="DeviceBrandName" value="Apple" />
-		<property name="Capacity" value="A1661-32gb" />
+		<property name="Capacity" value="32gb" />
 		<property name="Color" value="Gold" />
 		<property name="Ship_Flow" value="Yes" />
 	</testcase>
-
 	<testcase name="Placing just accessory through Verify Link option">
-		<property name="AccountNumber" value="8155100360288835" />		
+		<property name="AccountNumber" value="8069100020053467" />		
 		<property name="ID_Validation" value="State ID" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
 		<property name="flag" value="S" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
@@ -110,12 +139,17 @@
 		<property name="DOB" value="1985" />
 		<property name="AccessoryCategory" value="audio" />
 		<property name="AccessoryName" value="Beats urBeats" />
-		<property name="Color" value="Space Gray" />
+		<property name="ColorAccessory" value="Space Gray" />
 	</testcase>
-	
 	<testcase name="Placing just accessory without existing device ship flow option">
-		<property name="AccountNumber" value="8155100524663428" />		
-		<property name="ID_Validation" value="US Passport" />	
+		<property name="AccountNumber" value="8498350172134422" />		
+		<property name="ID_Validation" value="US Passport" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />	
 		<property name="flag" value="S" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
@@ -125,8 +159,14 @@
 	</testcase>
 	
 	<testcase name="Placing hybrid devices in store order-Scan">
-		<property name="AccountNumber" value="8778106040184416" />	
+		<property name="AccountNumber" value="8498330020063866" />	
 		<property name="flag" value="H" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
 		<property name="ID_Validation" value="Driver License" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
@@ -159,6 +199,12 @@
 	<testcase name="Placing 5 devices in store order for first-time user through scan">
 		<property name="AccountNumber" value="8155100524663428" />	
 		<property name="flag" value="H" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
 		<property name="ID_Validation" value="Driver License" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
@@ -211,11 +257,16 @@
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
 	</testcase>
-	
 	<testcase name="Placing 5 devices in store order for first-time user through verify">
 	     <property name="flag" value="H" />	
-		<property name="AccountNumber" value="8155100524663428" />		
+		<property name="AccountNumber" value="8069100020053459" />		
 		<property name="ID_Validation" value="Driver License" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
@@ -245,6 +296,11 @@
 		<property name="CurrentPhoneNumber3" value="5419670020" />
 		<property name="CurrentPhoneNumber4" value="5419670020" />
 		<property name="CurrentPhoneNumber5" value="5419670020" />
+		<property name="Color1" value="Gold" />
+        <property name="Color2" value="Gold Platinum" />
+        <property name="Color3" value="Gold" />
+        <property name="Color4" value="Black Onyx" />
+        <property name="Color5" value="Titan Black" />
 		<property name="Name1" value="Xfinity1" />
 		<property name="Name2" value="Xfinity2" />
 		<property name="Name3" value="Xfinity3" />
@@ -257,7 +313,7 @@
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
 		<property name="Device_Name1" value="Apple iPhone 7 Plus" />
-		<property name="Device_Name2" value="Samsung Galaxy S7" />
+		<property name="Device_Name2" value="Samsung Galaxy S7 edge" />
 		<property name="Device_Name3" value="Apple iPhone 7" />
 		<property name="Device_Name4" value="Modesto TEST Galaxy S7" />
         <property name="Device_Name5" value="LG X power" /> 
@@ -266,16 +322,22 @@
 		<property name="DeviceBrandName3" value="Apple" />
 		<property name="DeviceBrandName4" value="Modesto" />
 		<property name="DeviceBrandName5" value="LG" />
-		<property name="Capacity1" value="A1661-32gb" />
-		<property name="Capacity2" value="SM-G950U-64gb" />
-		<property name="Capacity3" value="A1660-32gb" />
-		<property name="Capacity4" value="TESTPHONES-32 GB" />
-		<property name="Capacity5" value="LG-K212-16gb" />
+		<property name="Capacity1" value="32gb" />
+		<property name="Capacity2" value="32gb" />
+		<property name="Capacity3" value="32gb" />
+		<property name="Capacity4" value="32 GB" />
+		<property name="Capacity5" value="16gb" />
 		</testcase>
 		<testcase name="Placing hybrid devices in store order-Verify">
 	     <property name="flag" value="H" />	
-		<property name="AccountNumber" value="8069100020038930" />		
-		<property name="ID_Validation" value="Driver License" />	
+		<property name="AccountNumber" value="8069100020053467" />		
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />	
 		<property name="SSN" value="1111" />	
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
@@ -299,10 +361,640 @@
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
 		<property name="Device_Name1" value="Apple iPhone 7 Plus" />
-		<property name="Device_Name2" value="Samsung Galaxy S8" />
+		<property name="Device_Name2" value="Samsung Galaxy S7 edge" />
 		<property name="DeviceBrandName1" value="Apple" />
 		<property name="DeviceBrandName2" value="Samsung" />
-		<property name="Capacity1" value="A1661-128gb" />
-		<property name="Capacity2" value="SM-G950U-64gb" />
+		<property name="Capacity1" value="32gb" />
+		<property name="Color1" value="Gold" />
+        <property name="Color2" value="Gold Platinum" />
+		<property name="Capacity2" value="32gb" />
 </testcase>
+<testcase name="Placing hybrid devices and single accessory through verify">
+	     <property name="flag" value="H" />	
+		<property name="AccountNumber" value="8069100020053467" />		
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="PaymentPlan2" value="Pay In Full" />
+		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DataOption2" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name1" value="Xfinity1" />
+		<property name="Name2" value="Xfinity2" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+		<property name="Device_Name1" value="Apple iPhone 7 Plus" />
+		<property name="Device_Name2" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName1" value="Apple" />
+		<property name="DeviceBrandName2" value="Samsung" />
+		<property name="Capacity1" value="32gb" />
+		<property name="Color1" value="Gold" />
+        <property name="Color2" value="Gold Platinum" />
+		<property name="Capacity2" value="32gb" />
+		<property name="AccessoryName1" value="Random Order 3.4A Micro USB DUO Car Charger" />
+		<property name="ColorAccessory1" value="Black" />
+</testcase>
+<testcase name="Placing hybrid devices and multiple accessories through verify">
+	     <property name="flag" value="H" />	
+		<property name="AccountNumber" value="8498330020063866" />		
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="PaymentPlan2" value="Pay In Full" />
+		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DataOption2" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name1" value="Xfinity1" />
+		<property name="Name2" value="Xfinity2" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+		<property name="Device_Name1" value="Apple iPhone 7 Plus" />
+		<property name="Device_Name2" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName1" value="Apple" />
+		<property name="DeviceBrandName2" value="Samsung" />
+		<property name="Capacity1" value="32gb" />
+		<property name="Color1" value="Gold" />
+        <property name="Color2" value="Gold Platinum" />
+		<property name="Capacity2" value="32gb" />
+		<property name="AccessoryName1" value="Random Order 2.4A Micro USB DUO Car Charger" />
+		<property name="ColorAccessory1" value="Black" />	
+		<property name="AccessoryName2" value="Random Order 4.8A Dual USB Universal Bullet Car Charger" />
+		<property name="ColorAccessory2" value="Black" />	
+		<property name="AccessoryName3" value="Incipio NGP Pure Case" />
+		<property name="ColorAccessory3" value="Black" />
+</testcase>
+<testcase name="Placing single device and single accessory through verify link option">
+		<property name="AccountNumber" value="8498330020063866" />			
+		<property name="ID_Validation" value="US Passport" />	
+		<property name="SSN" value="1111" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />	
+		<property name="DeviceBrandName" value="Apple" />
+		<property name="Device_Name" value="Apple iPhone 7 Plus" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Gold" />
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />	
+		<property name="Name" value="Xfinity" />
+		<property name="flag" value="S" />	
+		<property name="AccessoryName" value="Random Order 2.4A Micro USB DUO Car Charger" />
+		<property name="ColorAccessory" value="Black" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+	</testcase>
+	<testcase name="Placing single device and multiple accessories through verify link option">
+		<property name="AccountNumber" value="8498330020063866" />		
+		<property name="ID_Validation" value="US Passport" />	
+		<property name="SSN" value="1111" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />	
+		<property name="DeviceBrandName1" value="Apple" />
+		<property name="Device_Name1" value="Apple iPhone 7 Plus" />
+		<property name="Capacity1" value="32gb" />
+		<property name="Color1" value="Gold" />
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />	
+		<property name="flag" value="H" />	
+		<property name="Name1" value="Xfinity1" />
+		<property name="AccessoryName1" value="Random Order 2.4A Micro USB DUO Car Charger" />
+		<property name="ColorAccessory1" value="Black" />	
+		<property name="AccessoryName2" value="Random Order 4.8A Dual USB Universal Bullet Car Charger" />
+		<property name="ColorAccessory2" value="Black" />	
+		<property name="AccessoryName3" value="Incipio NGP Pure Case" />
+		<property name="ColorAccessory3" value="Black" />
+		<property name="AccessoryName4" value="Apple Lightning to 3.5 mm Headphone Jack Adapter" />
+		<property name="ColorAccessory4" value="White" />
+		<property name="AccessoryName5" value="Incipio Apple iPhone SE NGP" />
+		<property name="ColorAccessory5" value="Black" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+	</testcase>
+	<testcase name="Validate the customer information in Account Details Page">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>	
+	<testcase name="Verify the Compare Bills">
+		<property name="AccountNumber" value="8155100524663428" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>	
+	<testcase name="Verify the Launch Mobile">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>
+	<testcase name="Validate the Appointments section">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>
+	<testcase name="Validate the service images are displayed (TV, Wifi, Phone)">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>
+	<testcase name="Verify the View All link">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>
+	<testcase name="Verify the Add Note link displays the New Note">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>
+	<testcase name="Validate the New Note page (displays the Select Note Type, Subject, Message)">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>
+	<testcase name="Click on Close in the Add New Note page">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>
+	<testcase name="Click on Cancel in the Add New Note page">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>
+	<testcase name="Verify the Notes section">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+	</testcase>
+	<testcase name="Verify the Compare Bills">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />	
+		
+	</testcase>	
+	<testcase name="Verify the Account Status">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="US Passport" />
+	</testcase>	
+	<testcase name="Validate the Driver's License">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+	</testcase>	
+	<testcase name="Validate the State ID">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+	</testcase>	
+	<testcase name="Validate the US Passport">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+	</testcase>
+	<testcase name="Valid Email and click on Look Up">
+		<property name="ValidEmail" value="Frontend_427@comcast.net" />
+		<property name="ID_Validation" value="Driver License" />		
+	</testcase>	
+	<testcase name="Valid Account Number and click on Look Up">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+	</testcase>
+	<testcase name="Invalid Email and click on Look Up">
+		<property name="InvalidEmail" value="comcast.net" />		
+	</testcase>
+	<testcase name="Invalid Name and click on Look Up">
+		<property name="InvalidName" value="ejrherherher" />
+	</testcase>
+	<testcase name="Invalid Phone Number and click on Look Up">
+		<property name="InvalidPhone" value="0000000000" />
+	</testcase>
+	
+	<testcase name="Validate ID does not match link navigates to SSN validation">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+	</testcase>
+	<testcase name="Validate customerId with valid SSN">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="validSSN" value="1111" />
+	</testcase>
+	<testcase name="Validate customerId with incorrect SSN">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="incorrectSSN" value="1855" />
+	</testcase>	
+	<testcase name="Verification of close button for SSN validation Page">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+	</testcase>
+	<testcase name="Verification of cancel button for SSN validation Page">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+	</testcase>	
+	<testcase name="Verify the Scan Device message displayed under Manage Devices">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>	
+	<testcase name="Validate close button for Customer ID verification Page">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+	</testcase>
+	<testcase name="Invalid Account Number and click on Look Up">
+		<property name="InvalidAccountNumber" value="221321321312321434545342343423432434" />		
+	</testcase>
+	<testcase name="Validate the Back button">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+	</testcase>	
+	<testcase name="Validate the sorting button is displayed in Date/Time">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+	</testcase>	
+	<testcase name="Verify after clicking the Scan Device button displays the Scan Barcode text">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>
+	<testcase name="Verify Scan Device and close it">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>
+	<testcase name="Verify Scan Device and cancel it">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>
+	<testcase name="Verify Add Device Manually navigates to next page">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>
+	<testcase name="Validate Add Device Manually and close it">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>
+	<testcase name="Validate Add Device Manually and cancel it">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>	
+	<testcase name="Validate Yes in the Warning page of Add Device Manually after clicking close/cancel">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>
+	<testcase name="Validate No in the Warning page of Add Device Manually after clicking close/cancel">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>
+	<testcase name="Validate Close in the Warning page of Add Device Manually after clicking close/cancel">
+	<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>
+	<testcase name="Validate the error message for invalid number in Add Device Manually">
+	<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="Device_Number" value="00008982838" />	
+	</testcase>
+	<testcase name="Verify ok in error page of Add Device Manually">
+	<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="Device_Number" value="00008982838" />	
+	</testcase>
+	<testcase name="Verify close in error page of Add Device Manually">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="Device_Number" value="00008982838" />	
+	</testcase>
+	<testcase name="Validate the device details are displayed for valid serial number in Add Device Manually">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="Device_Number_Valid" value="9762A76A5A6F" />	
+	</testcase>	
+	<testcase name="Verify close in the device details page for valid serial number/MAC address">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="Device_Number_Valid" value="9762A76A5A6F" />	
+	</testcase>
+	<testcase name="Verify cancel in the device details page for valid serial number/MAC address">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="Device_Number_Valid" value="9762A76A5A6F" />	
+	</testcase>
+	<testcase name="Validate all the fields are displayed in notes (Date/Time, Source, Name, Type, Subject, Message)">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+	</testcase>
+	<testcase name="Placing multiple devices by giving valid IMEI for a customer with Run Credit Check popup displays approved">
+		<property name="AccountNumber" value="8498330020063866" />	
+		<property name="flag" value="H" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="2" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber1" value="354956073094943" />	
+		<property name="IMEInumber2" value="359463070026544" />	
+		<property name="IMEInumber3" value="357811113984941" />	
+		<property name="SIMnumber1" value="73461234613846384723" />
+		<property name="SIMnumber2" value="73461234613846384713" />
+		<property name="SIMnumber3" value="73461234613846384733" />
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="PaymentPlan2" value="Pay In Full" />
+		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DataOption2" value="Unlimited" />
+		<property name="PaymentPlan3" value="Pay In Full" />
+		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DataOption3" value="Unlimited" />	
+		<property name="ChooseNumber1" value="Get New Number" />	
+		<property name="ChooseNumber2" value="Get New Number" />
+		<property name="ChooseNumber3" value="Get New Number" />
+		<property name="CurrentPhoneNumber1" value="5419670010" />
+		<property name="CurrentPhoneNumber2" value="5419670020" />
+		<property name="CurrentPhoneNumber3" value="5419670020" />
+		<property name="Name1" value="Xfinity1" />
+	   <property name="Name2" value="Xfinity2" />
+	   <property name="Name3" value="Xfinity3" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+	</testcase>
+	<testcase name="Placing multiple devices through ship flow link for a customer with Run Credit Check popup displays approved">
+	     <property name="flag" value="H" />	
+		<property name="AccountNumber" value="8498330020063866" />		
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="PaymentPlan2" value="Pay In Full" />
+		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DataOption2" value="Unlimited" />
+		<property name="PaymentPlan3" value="Pay In Full" />
+		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DataOption3" value="Unlimited" />		
+		<property name="ChooseNumber1" value="Get New Number" />	
+		<property name="ChooseNumber2" value="Get New Number" />
+		<property name="ChooseNumber3" value="Get New Number" />			
+		<property name="CurrentPhoneNumber1" value="5419670010" />
+		<property name="CurrentPhoneNumber2" value="5419670020" />
+		<property name="CurrentPhoneNumber3" value="5419670020" />
+		<property name="Color1" value="Gold" />
+        <property name="Color2" value="Gold Platinum" />
+        <property name="Color3" value="Gold" />
+		<property name="Name1" value="Xfinity1" />
+		<property name="Name2" value="Xfinity2" />
+		<property name="Name3" value="Xfinity3" />
+		<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+		<property name="Device_Name1" value="Apple iPhone 7 Plus" />
+		<property name="Device_Name2" value="Samsung Galaxy S7 edge" />
+		<property name="Device_Name3" value="Apple iPhone 7" />
+		<property name="DeviceBrandName1" value="Apple" />
+		<property name="DeviceBrandName2" value="Samsung" />
+		<property name="DeviceBrandName3" value="Apple" />
+		<property name="Capacity1" value="32gb" />
+		<property name="Capacity2" value="32gb" />
+		<property name="Capacity3" value="32gb" />
+		</testcase>
+		<testcase name="Verify the Manage Devices">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+	</testcase>
+	<testcase name="Validate the Eligible Icon and its text at the footer">
+		<property name="AccountNumber" value="8299400280104584" />
+		<property name="ID_Validation" value="Driver License" />
+			<property name="notetype" value="RETENTION"/>
+	</testcase>
+	<testcase name="Verify the View Bill">
+		<property name="AccountNumber" value="8299400280104584" />
+		<property name="ID_Validation" value="Driver License" />
+			<property name="notetype" value="RETENTION"/>
+	</testcase>
+	<testcase name="Verify the Mobile Details section">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+			<property name="notetype" value="RETENTION"/>
+	</testcase>
+	<testcase name="Click on Ok in the Message required text">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+			<property name="notetype" value="RETENTION"/>
+	</testcase>
+	<testcase name="Click on Close in the Message required text">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+			<property name="notetype" value="RETENTION"/>
+	</testcase>
+	<testcase name="Verify the Message required text,add message (Click on Add Note after selecting note type and without message)">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="notetype" value="RETENTION"/>
+	</testcase>
+	<testcase name="Click on Ok in the Note type required text">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+			<property name="notetype" value="RETENTION"/>
+	</testcase>
+	<testcase name="Click on Close in the Note type required text">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+			<property name="notetype" value="RETENTION"/>
+	</testcase>
+	<testcase name="Verify the Note type required text - select a note type">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+			<property name="notetype" value="RETENTION"/>
+	</testcase>
+	<testcase name="Placing multiple accessories through verify link (PreCondition: already a device should be ordered)">
+		<property name="AccountNumber" value="8299400280104584" />		
+		<property name="ID_Validation" value="US Passport" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />	
+		<property name="flag" value="M" />	
+		<property name="AccessoryName1" value="Random Order Galaxy S7 edge Screen Protection" />
+		<property name="Color1" value="Clear" />	
+		<property name="AccessoryName2" value="Random Order Apple iPhone 7 Glass Screen Protector" />
+		<property name="Color2" value="Glass" />
+		<property name="AccessoryName3" value="Random Order Quick Charge 2.0 Home Charger" />
+		<property name="Color3" value="Black" />
+		<property name="AccessoryName4" value="Modesto Test Accessory" />
+		<property name="Color4" value="Black Onyx" />
+		<property name="AccessoryName5" value="OtterBox Apple iPhone SE Symmetry" />
+		<property name="Color5" value="Black" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+	</testcase>
+		<testcase name="Placing a Single device by giving invalid IMEI number results in error message">
+		<property name="AccountNumber" value="8498330020063866" />		
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber" value="213213213232323" />	
+		<property name="Ship_Flow" value="No" />
+	</testcase>
+	<testcase name="Validate Back in Manage Devices page">
+		<property name="LookUpInput" value="AccountNumber" />
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />	
+	</testcase>
+	<testcase name="Placing maximum device limit by giving valid IMEI number, if the member has already a single active line">
+		<property name="AccountNumber" value="8498350172134422" />	
+		<property name="flag" value="H" />	
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="ID_Validation" value="Driver License" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="2" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber1" value="354956073094943" />	
+		<property name="IMEInumber2" value="359463070026544" />	
+		<property name="IMEInumber3" value="357811113984941" />	
+		<property name="IMEInumber4" value="357811113984931" />	
+		<property name="IMEInumber5" value="357811113984951" />	
+		<property name="SIMnumber1" value="73461234613846384723" />
+		<property name="SIMnumber2" value="73461234613846384713" />
+		<property name="SIMnumber3" value="73461234613846384733" />
+		<property name="SIMnumber4" value="73461234613846384743" />	
+		<property name="SIMnumber5" value="73461234613846384753" />
+		<property name="PaymentPlan1" value="Pay In Full" />
+		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DataOption1" value="Unlimited" />	
+		<property name="PaymentPlan2" value="Pay In Full" />
+		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DataOption2" value="Unlimited" />
+		<property name="PaymentPlan3" value="Pay In Full" />
+		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DataOption3" value="Unlimited" />	
+		<property name="PaymentPlan4" value="Pay In Full" />
+		<property name="DeviceProtection4" value="withXMPP" />	
+		<property name="DataOption4" value="Unlimited" />	
+		<property name="ChooseNumber1" value="Get New Number" />	
+		<property name="ChooseNumber2" value="Get New Number" />
+		<property name="ChooseNumber3" value="Get New Number" />
+		<property name="ChooseNumber4" value="Get New Number" />
+		<property name="CurrentPhoneNumber1" value="5419670010" />
+		<property name="CurrentPhoneNumber2" value="5419670020" />
+		<property name="CurrentPhoneNumber3" value="5419670020" />
+		<property name="CurrentPhoneNumber4" value="5419670020" />
+		<property name="Name1" value="Xfinity1" />
+	   <property name="Name2" value="Xfinity2" />
+	   <property name="Name3" value="Xfinity3" />
+	   <property name="Name4" value="Xfinity4" />
+	   	<property name="EditSIM" value="No" />
+		<property name="CreditCardNumber" value="41111111111111111" />		
+		<property name="Expiration" value="1019" />
+		<property name="CVV" value="123" />
+		<property name="Email_Address" value="Frontend_427@comcast.net" />
+		<property name="Phone_Number" value="5467891234" />	
+	</testcase>
+	<testcase name="Validate the Back button">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+	</testcase>
+	
+	<testcase name="Validate the sorting button is displayed in Date/Time">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+	</testcase>
+	
+	<testcase name="Validate all the fields are displayed in notes (Date/Time, Source, Name, Type, Subject, Message)">
+		<property name="AccountNumber" value="8069100020038930" />
+		<property name="ID_Validation" value="Driver License" />
+	</testcase>
 </testcases>

@@ -9,7 +9,9 @@ public class DeviceBrandPage extends WebOperations{
 	//private static Logger log = Logger.getLogger(Account_LookUpPage.class);
  public static By
  
- PhoneByBrand = By.xpath("//h2[text()='Phones by Brand']");
+ PhoneByBrand = By.xpath("//h2[text()='Phones by Brand']"),
+ ViewCatalog = By.xpath("//div[@class='brands-container accessories']//button[text()='View Catalog']");
+
 
 
 	public static void selectDeviceBrand(String deviceName) 

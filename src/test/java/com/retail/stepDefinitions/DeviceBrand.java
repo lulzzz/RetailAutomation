@@ -91,4 +91,17 @@ public void redirectedToBrowseAccessories() throws Exception{
 		throw(e);
 	}
 }
+@When("^I click on View catalog link for Accessories by Category$")
+public void viewCatalog() {
+	try {
+	clickElement(DeviceBrandPage.ViewCatalog);
+	log.info("Clicked View Catalog");
+	}
+
+	catch (Exception e) {
+	log.error("GOT EXCEPTION in viewCatalog(): " + LogUtils.logStackTrace(e));
+	e.printStackTrace();
+	throw(e);
+}
+}
 }

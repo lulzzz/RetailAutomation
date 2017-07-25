@@ -2,6 +2,7 @@ package com.retail.stepDefinitions;
 
 import org.apache.log4j.Logger;
 
+import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
 import com.framework.wrapper.WebOperations;
 import com.retail.pageObjects.*;
@@ -19,21 +20,22 @@ public class DeviceSearch extends DeviceSearchPage{
 	DeviceConfig deviceconf = new DeviceConfig();
 	DeviceBrand deviceBrand = new DeviceBrand();
 	DeviceCustomize deviceCustomizeObj = new DeviceCustomize();
+	CustomerPreSignaturePage custPage= new CustomerPreSignaturePage();
 	ShoppingCart shopcart = new ShoppingCart();
 	BrowseDevice browsedevice= new BrowseDevice();
+	BrowseAccessory browseAccessory= new BrowseAccessory();
+	BrowseAccessoryPage browserAccessoryPage= new BrowseAccessoryPage();
 	public static int device_count=1;
 		
 	@When("^I enter valid IMEI with 15 digits$")	
 	public void validIMEI()  {
 		try {
 			String flag=getXMLData("flag");
-			System.out.println(flag);
 			if(flag.equals("H"))
 			{
 					String IMEI=getXMLData("IMEInumber"+device_count);
 					clickElement(DeviceSearchPage.IMEInum);
 					log.info("Clicked on IMEI");	
-					System.out.println(getXMLData("IMEInumber"+device_count));
 					typeValue(DeviceSearchPage.IMEInum,IMEI);
 					log.info("Entered IMEI number");
 			}
@@ -42,7 +44,6 @@ public class DeviceSearch extends DeviceSearchPage{
 				String IMEI=getXMLData("IMEInumber");
 				clickElement(DeviceSearchPage.IMEInum);
 				log.info("Clicked on IMEI");	
-				System.out.println(getXMLData("IMEInumber"));
 				typeValue(DeviceSearchPage.IMEInum,IMEI);
 				log.info("Entered IMEI number");				
 			}
@@ -185,11 +186,19 @@ public void verifylink() throws Exception{
 	accountlookup.clickOnLookUp();
 	accountlookup.acctDetailsPageLaunch();
 	acctDetailsObj.launchMobile();
+	if(isElementDisplayed(CustomerInfoPage.dobField,10))
+	{
 	custMoreInfoObj.enterValidDOB();	
 	custMoreInfoObj.enterValidSSN();
 	custMoreInfoObj.selectValidLines();
+	}
+	if(isElementDisplayed(CustomerPreSignaturePage.run_creditCheck,5)){
+		clickElement(CustomerPreSignaturePage.run_creditCheck);
+		
+	}
 	clickVerify();
 	redirectToDevicBrand();
+	
 	}catch(Exception e){
 		e.printStackTrace();
 		throw(e);
@@ -197,7 +206,7 @@ public void verifylink() throws Exception{
 }
 
 @Given("^agent navigates to 'verify' link to shop for just accessory$")
-public void verifylinkforaccessory() throws Exception{
+public void verifylinkforaccessory1() throws Exception{
 	try{
 	accountlookup.enterValidAcctNumber();
 	accountlookup.clickOnLookUp();
@@ -314,11 +323,14 @@ public void agentLooksForAcct() throws Exception{
 		     device_count=device_count+1;
 		     if(devices==0){
 			shopcart.add_anotherLine();
-//			if(isElementDisplayed(CustomerPreSignaturePage.runCreditCheck,5)){
-//				clickElement(CustomerPreSignaturePage.runCreditCheck);
-//				clickElement(CustomerPreSignaturePage.backToProfile);
-//				System.exit(0);
-//			}
+			if(isElementDisplayed(custPage.run_creditCheck,5))
+			{
+		clickElement(custPage.run_creditCheck);
+		if(isElementDisplayed(custPage.approved_check,5))
+		{
+			clickElement(custPage.close);
+		}
+			}
 		     }
 		     devices=devices+1;
 			 }
@@ -348,6 +360,14 @@ public void agentLooksForAcct() throws Exception{
 	 System.out.println(a);
 	 if(a<=3){
 	shopcart.add_anotherLine();
+	if(isElementDisplayed(custPage.run_creditCheck,5))
+	{
+clickElement(custPage.run_creditCheck);
+if(isElementDisplayed(custPage.approved_check,5))
+{
+	clickElement(custPage.close);
+}
+	}
 	 }
 	a=a+1;
 	 }
@@ -380,14 +400,313 @@ public void agentLooksForAcct() throws Exception{
 		     device_count=device_count+1;
 		     if(devices<=4){
 			shopcart.add_anotherLine();
-//			if(isElementDisplayed(CustomerPreSignaturePage.runCreditCheck,5)){
-//				clickElement(CustomerPreSignaturePage.runCreditCheck);
-//				clickElement(CustomerPreSignaturePage.backToProfile);
-//				System.exit(0);
-//			}
+			if(isElementDisplayed(custPage.run_creditCheck,5))
+			{
+		clickElement(custPage.run_creditCheck);
+		if(isElementDisplayed(custPage.approved_check,5))
+		{
+			clickElement(custPage.close);
+		}
+			}
 		     }
 		     devices=devices+1;
 			 }
 			   device_count=1;
 		}
+	@And("^agent adds hybrid devices and accessory into cart through verify$")
+	public void add_hybridDevice_accessory_Verify() throws Exception
+	{
+	 int devices=0;
+	 clickVerify();
+	 redirectToDevicBrand();
+		 while(devices<2)
+		 {
+	     deviceBrand.selectDeviceBrand();
+	     deviceBrand.redirectedToBrowseDevice();
+	     browsedevice.selectDevice_Verify();
+	     browsedevice.selectStorage_Verify();
+	     browsedevice.selectColor_Verify();
+	     browsedevice.verifyTotalAmount();
+	     browsedevice.clickSelect();
+	     deviceconf.paymentplan();
+	     deviceconf.protectionplan();
+	     deviceconf.dataplan();
+	     deviceconf.nextdeviceconfig();	
+		 deviceCustomizeObj.choosenumber();
+		 deviceCustomizeObj.name();
+		 deviceCustomizeObj.addtocart();
+	     shopcart.verifyDeviceCharges();
+	     device_count=device_count+1;
+	     if(devices==0){
+		shopcart.add_anotherLine();
+		if(isElementDisplayed(custPage.run_creditCheck,5))
+		{
+	clickElement(custPage.run_creditCheck);
+	if(isElementDisplayed(custPage.approved_check,5))
+	{
+		clickElement(custPage.close);
+	}
+		}
+	     }
+	     devices=devices+1;
+		 }
+		 device_count=1;
+		 shopcart.add_Accessory();
+		 deviceBrand.redirectedToBrowseAccessories();
+		 browseAccessory.selectAccessory();
+		 browseAccessory.colorAccessory();
+		 browsedevice.verifyTotalAmount();
+		 browsedevice.clickSelect();
+		 
+	}
+	@And("^agent adds hybrid devices and multiple accessories into cart through verify$")
+	public void add_hybridDevice_Multi_accessory_Verify() throws Exception
+	{
+	 int devices=0;
+	 int accesory=0;
+	 clickVerify();
+	 redirectToDevicBrand();
+		 while(devices<2)
+		 {
+	     deviceBrand.selectDeviceBrand();
+	     deviceBrand.redirectedToBrowseDevice();
+	     browsedevice.selectDevice_Verify();
+	     browsedevice.selectStorage_Verify();
+	     browsedevice.selectColor_Verify();
+	     browsedevice.verifyTotalAmount();
+	     browsedevice.clickSelect();
+	     deviceconf.paymentplan();
+	     deviceconf.protectionplan();
+	     deviceconf.dataplan();
+	     deviceconf.nextdeviceconfig();	
+		 deviceCustomizeObj.choosenumber();
+		 deviceCustomizeObj.name();
+		 deviceCustomizeObj.addtocart();
+	     shopcart.verifyDeviceCharges();
+	     device_count=device_count+1;
+	     if(devices==0){
+		shopcart.add_anotherLine();
+		if(isElementDisplayed(custPage.run_creditCheck,5))
+		{
+	clickElement(custPage.run_creditCheck);
+	if(isElementDisplayed(custPage.approved_check,5))
+	{
+		clickElement(custPage.close);
+	}
+		}
+	     }
+	     devices=devices+1;
+		 }
+		 device_count=1;
+		 while(accesory<3)
+		 {
+		 shopcart.add_Accessory();
+		 deviceBrand.redirectedToBrowseAccessories();
+		 browseAccessory.selectAccessory();
+		 browseAccessory.colorAccessory();
+		 browsedevice.verifyTotalAmount();
+		 browsedevice.clickSelect();
+		 accesory=accesory+1;
+	     device_count=device_count+1;
+		 }
+		
+		 device_count=1;
+	}
+	@When("^agent adds multiple devices into cart and run creditcheck$")
+	public void add_MutltipleDevice_credit_verify() throws Exception
+	{
+		int devices=0;
+		 clickVerify();
+		 redirectToDevicBrand();
+			 while(devices<3)
+			 {
+		     deviceBrand.selectDeviceBrand();
+		     deviceBrand.redirectedToBrowseDevice();
+		     browsedevice.selectDevice_Verify();
+		     browsedevice.selectStorage_Verify();
+		     browsedevice.selectColor_Verify();
+		     browsedevice.verifyTotalAmount();
+		     browsedevice.clickSelect();
+		     deviceconf.paymentplan();
+		     deviceconf.protectionplan();
+		     deviceconf.dataplan();
+			 deviceconf.nextdeviceconfig();	
+			 deviceCustomizeObj.choosenumber();
+			 deviceCustomizeObj.name();
+			 deviceCustomizeObj.addtocart();
+		     shopcart.verifyDeviceCharges();
+		     device_count=device_count+1;
+		     if(devices<=2){
+			shopcart.add_anotherLine();
+			if(isElementDisplayed(custPage.run_creditCheck,5))
+			{
+		clickElement(custPage.run_creditCheck);
+		if(isElementDisplayed(custPage.approved_check,5))
+		{
+			clickElement(custPage.close);
+		}
+			}
+		     }
+		     devices=devices+1;
+			 }
+			   device_count=1;
+		}
+	@When("^agent adds multiple devices into cart with scan and run creditcheck$")
+	public void add_MutltipleDevice_scan() throws Exception
+	{
+	int a=0;
+	 while(a<2)
+	 {
+	validIMEI();
+	searchbutton();
+	devicedetails();
+	validSIMnumber();
+	nextbutton();
+	deviceconf.paymentplan();
+	deviceconf.protectionplan();
+	deviceconf.dataplan();
+	 deviceconf.nextdeviceconfig();	
+	 deviceCustomizeObj.choosenumber();
+	 deviceCustomizeObj.name();
+	 deviceCustomizeObj.addtocart();
+	shopcart.verifyDeviceCharges();
+	device_count=device_count+1;
+	 System.out.println(a);
+	 if(a<=1){
+	shopcart.add_anotherLine();
+	if(isElementDisplayed(custPage.run_creditCheck,5))
+	{
+clickElement(custPage.run_creditCheck);
+if(isElementDisplayed(custPage.approved_check,5))
+{
+	clickElement(custPage.close);
+}
+	}
+	 }
+	a=a+1;
+	 }
+	 device_count=1;
+	}
+	
+	@Given("^agent navigates to 'verify' link to shop for accessory$")
+	public void verifylinkforaccessory() throws Exception{
+		try{
+		accountlookup.enterValidAcctNumber();
+		accountlookup.clickOnLookUp();
+		accountlookup.acctDetailsPageLaunch();
+		acctDetailsObj.launchMobile();	
+		if(isElementDisplayed(CustomerInfoPage.dobField,10))
+		{
+		custMoreInfoObj.enterValidDOB();
+		}
+		
+		custMoreInfoObj.enterValidSSN();
+		if(isElementDisplayed(CustomerInfoPage.deviceSection,10))
+		{
+		custMoreInfoObj.selectValidLines();
+		}
+		//custMoreInfoObj.clickSubmit();
+		clickVerify();
+		if(isElementDisplayed(DeviceBrandPage.PhoneByBrand,10))
+		{
+			if(isElementDisplayed(DeviceBrandPage.ViewCatalog,10))
+			{
+				deviceBrand.viewCatalog();
+			}
+		}
+		//redirectToDevicBrand();
+		
+		//
+		else
+			//else(isElementDisplayed(BrowseAccessoryPage.accessoryButton,10))
+		{
+		browseAccessory.accessoryButton();
+		}
+		}catch(Exception e){
+			e.printStackTrace();
+			throw(e);
+		}
+	}
+
+	@When("^agent chooses multiple accessories$")
+	public void multipleAccessories() throws Exception {
+		deviceBrand.redirectedToBrowseAccessories();
+		browseAccessory.addMultipleAccessory();
+	}
+	@And("^agent scans the device with invalid number$")
+	public void invalidIMEI() throws Exception
+	{
+	try{
+		
+	invalidIMEInum();
+	searchbutton();
+	}catch(Exception e){
+		e.printStackTrace();
+		throw(e);
+	}
+	}
+	@When("^I enter invalid IMEI with 15 digits$")	
+	public void invalidIMEInum() throws Exception {
+		try {
+			Thread.sleep(5000);
+			clickElement(DeviceSearchPage.IMEInum);
+			log.info("Clicked on IMEI");	
+			System.out.println(getXMLData("IMEInumber"));
+			typeValue(DeviceSearchPage.IMEInum,getXMLData("IMEInumber"));
+			log.info("Entered IMEI number");		
+			
+		}catch (Exception e) {
+			log.error("GOT EXCEPTION in invalidIMEI(): " + LogUtils.logStackTrace(e));
+			e.printStackTrace();
+			throw(e);
+		}
+	}
+	@Then("^agent saw the error message$")
+	public void errorMessage() throws Exception {
+		try {
+			verifyText("Requested Resource Not Found");
+			verifyText("Device does not exist");
+			
+		}catch (Exception e) {
+			log.error("GOT EXCEPTION in invalidIMEI(): " + LogUtils.logStackTrace(e));
+			e.printStackTrace();
+			throw(e);
+		}
+	}
+	@When("^agent adds multiple devices into cart to reach to defined device limit through Scan$")
+	public void mutltipleDeviceScan() throws Exception
+	{
+	int a=0;
+	 while(a<4)
+	 {
+	validIMEI();
+	searchbutton();
+	devicedetails();
+	validSIMnumber();
+	nextbutton();
+	deviceconf.paymentplan();
+	deviceconf.protectionplan();
+	deviceconf.dataplan();
+	 deviceconf.nextdeviceconfig();	
+	 deviceCustomizeObj.choosenumber();
+	 deviceCustomizeObj.name();
+	 deviceCustomizeObj.addtocart();
+	shopcart.verifyDeviceCharges();
+	device_count=device_count+1;
+	 System.out.println(a);
+	 if(a<=3){
+	shopcart.add_anotherLine();
+	if(isElementDisplayed(custPage.run_creditCheck,5))
+	{
+clickElement(custPage.run_creditCheck);
+if(isElementDisplayed(custPage.approved_check,5))
+{
+	clickElement(custPage.close);
+}
+	}
+	 }
+	a=a+1;
+	 }
+	 device_count=1;
+	}
 }
