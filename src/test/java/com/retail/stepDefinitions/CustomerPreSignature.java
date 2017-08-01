@@ -1,10 +1,15 @@
 package com.retail.stepDefinitions;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 
 import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
 import com.retail.pageObjects.CustomerPreSignaturePage;
+import com.retail.pageObjects.SignaturePage;
+
 import cucumber.api.java.en.*;
 
 
@@ -57,7 +62,7 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 			    String city=getValue(CustomerPreSignaturePage.city);
 			    String state=getValue(CustomerPreSignaturePage.state);
 			    String zipcode=getValue(CustomerPreSignaturePage.zipcode);
-			    if((!firstName.isEmpty()) && (!lastName.isEmpty()) && (!Address1.isEmpty()) && (!city.isEmpty()) &&(!state.isEmpty()) && (!zipcode.isEmpty()))
+			    if((!firstName.isEmpty()) && (!lastName.isEmpty()) && (!Address1.isEmpty())  && (!city.isEmpty()) &&(!state.isEmpty()) && (!zipcode.isEmpty()))
 			    {
 			    	ExtentReporter.reportStep(getDriver(), "Billing Address is autopopulated.", "PASS",  1);
 			    }
@@ -103,21 +108,27 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 	public  void validCreditCardDetails() throws Exception {
 		try {			
 			ExtentReporter.reportStep("BDD Step: When I enter valid information for credit card details", "INFO");
+	
 			if(isElementDisplayed(CustomerPreSignaturePage.edit_paymentAddress,5))
 			{				
+		
 				log.info("Credit information is saved already");
 			}
-			if(isElementDisplayed(CustomerPreSignaturePage.creditCardNumber,5))
+			else
 			{
+				switchToFrame(0);
 			clickElement(CustomerPreSignaturePage.creditCardNumber);
 			System.out.println(getXMLData("CreditCardNumber"));
 	        typeValue(CustomerPreSignaturePage.creditCardNumber,getXMLData("CreditCardNumber"));
 	        clickElement(CustomerPreSignaturePage.expiration);
-	        typeValue(CustomerPreSignaturePage.creditCardNumber,getXMLData("Expiration"));
+	        typeValue(CustomerPreSignaturePage.expiration,getXMLData("Expiration"));
 	        clickElement(CustomerPreSignaturePage.cvv);
-	        typeValue(CustomerPreSignaturePage.creditCardNumber,getXMLData("CVV"));
+	        typeValue(CustomerPreSignaturePage.cvv,getXMLData("CVV"));
+	    	exitFrame();
 	        clickElement(CustomerPreSignaturePage.save_creditCard);
-	        log.info("I enter valid information for credit card details");
+		
+	       
+				log.info("I enter valid information for credit card details");
 			}
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Customer Presignature Page(): " + LogUtils.logStackTrace(e));
@@ -200,9 +211,8 @@ public class CustomerPreSignature extends CustomerPreSignaturePage{
 			verifyBillingAddress();
 			saveBillingAddress();
 			billingAddressSaved();
-			wait(30);
-			//validCreditCardDetails();
-			//creditDetailsSaved();			
+			validCreditCardDetails();
+			creditDetailsSaved();
 			validContactDetails();
 			contactDetailsSaved();
 			CheckInfo();

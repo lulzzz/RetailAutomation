@@ -1,23 +1,21 @@
-@viewNotes
-Feature: View Notes
+Feature: Account LookUp
 
 As an agent,I need to support customer for shopping XFINITY Mobile products and plans.
 
 Background: 
 Given I launch the Retail application as an agent
 
-@run
 Scenario: Validate the Back button 
 Given I am in View Notes page
 When I click Back Button
 Then I am navigated to Account details page
 
-@run2
+@run
 Scenario: Validate all the fields are displayed in notes (Date/Time, Source, Name, Type, Subject, Message)
 Given I am in View Notes page
 Then I see all the fields are displayed in table
 
-@run1
+@run
 Scenario: Validate the sorting button is displayed in Date/Time
 Given I am in View Notes page
 Then I see the sorting button is displayed in Date/Time

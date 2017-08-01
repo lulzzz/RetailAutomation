@@ -92,5 +92,58 @@ public class ShoppingCart extends ShoppingCartPage{
 			throw(e);
 		}
 	}
+	@And("^I am in Shopping cart Page$")
+	public void shopping_Cart() {
+		try {
+			ExtentReporter.reportStep("BDD Step: I am in Shopping cart Page", "INFO");
+			clickElement(ShoppingCartPage.cartImage);
+			log.info("Cart Image is clicked");
+		}
+		catch(Exception e) {
+			log.error("GOT EXCEPTION in shopping_Cart():" + LogUtils.logStackTrace(e));
+			e.printStackTrace();
+			throw(e);
+		}
+	}
+	@When("^I select Continue Customization$")
+	public void continueCustom() {
+		try {
+			ExtentReporter.reportStep("BDD Step: I select Continue Customization", "INFO");
+			clickElement(ShoppingCartPage.continueCustom);
+			log.info("Clicked on Continue Customization");
+			
+		}catch (Exception e) {
+			
+			log.error("GOT EXCEPTION in continueCustom():" + LogUtils.logStackTrace(e));
+			e.printStackTrace();
+		}
+	}
 	
+	@When("^I select Delete Line$")
+	public void deleteLine() {
+		try {
+			ExtentReporter.reportStep("BDD Step: I select Delete Line", "INFO");
+			clickElement(ShoppingCartPage.deleteLine);
+			log.info("Clicked on Delete Line");
+			
+		}catch (Exception e) {
+			
+			log.error("GOT EXCEPTION in deleteLine():" + LogUtils.logStackTrace(e));
+			e.printStackTrace();
+		}
+	}
+	
+	@Then("^I see the cart text$")
+	public void cartText() {
+		try {
+			ExtentReporter.reportStep("BDD Step: I see the cart text", "INFO");
+			String cartText=getValue(ShoppingCartPage.cartText);
+			verifyText(cartText);			
+		}
+		catch (Exception e) {
+			
+			log.error("GOT EXCEPTION in cartText():" + LogUtils.logStackTrace(e));
+			e.printStackTrace();
+		}
+	}
 }

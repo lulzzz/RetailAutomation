@@ -1,4 +1,3 @@
-@accountDevices
 Feature: Account_Devices
 
 As an agent,I need to support customer for shopping XFINITY Mobile products and plans.
@@ -81,36 +80,36 @@ Scenario: Validate Close in the Warning page of Add Device Manually after clicki
 	Then I see the warning message
 	When I close the warning page
 	Then I see the Add Device page
+@ad
+Scenario: Validate the error message for invalid number in Add Device Manually
+	Given I am in Devices page
+	When I click Add Device Manually
+	Then I see the Add Device page
+	When I enter invalid number
+	And I click Next
+	Then I see the error message
 
-#Scenario: Validate the error message for invalid number in Add Device Manually
-#	Given I am in Devices page
-#	When I click Add Device Manually
-#	Then I see the Add Device page
-#	When I enter invalid number
-#	And I click Next
-#	Then I see the error message
+@ad
+Scenario: Verify ok in error page of Add Device Manually
+	Given I am in Devices page
+	When I click Add Device Manually
+	Then I see the Add Device page
+	When I enter invalid number
+	And I click Next
+	Then I see the error message
+	When I click ok in error page
+	Then I see the Add Device page
 
-#@ad
-#Scenario: Verify ok in error page of Add Device Manually
-#	Given I am in Devices page
-#	When I click Add Device Manually
-#	Then I see the Add Device page
-#	When I enter invalid number
-#	And I click Next
-#	Then I see the error message
-#	When I click ok in error page
-#	Then I see the Add Device page
-
-#@ad
-#Scenario: Verify close in error page of Add Device Manually
-#	Given I am in Devices page
-#	When I click Add Device Manually
-#	Then I see the Add Device page
-#	When I enter invalid number
-#	Then I see the error message
-#	And I click Next
-#	When I close the error page
-#	Then I see the Add Device page
+@ad
+Scenario: Verify close in error page of Add Device Manually
+	Given I am in Devices page
+	When I click Add Device Manually
+	Then I see the Add Device page
+	When I enter invalid number
+	Then I see the error message
+	And I click Next
+	When I close the error page
+	Then I see the Add Device page
 @ad
 Scenario: Validate the device details are displayed for valid serial number in Add Device Manually
 	Given I am in Devices page

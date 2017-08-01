@@ -10,7 +10,7 @@ public class GlobalSteps extends WebOperations{
 	public void i_launch_the_retail_url() throws Exception{	
 		try{
 		WebOperations.launchApp(getUrl(getEnvironment()));
-		WebOperations.verifyText("Look Up Customer");
+		WebOperations.verifyText("Look Up Customer");		
 		}catch(Exception e){
 			e.printStackTrace();
 			throw(e);

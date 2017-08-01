@@ -11,6 +11,7 @@ import cucumber.api.java.en.*;
 public class BrowseDevice extends BrowseDevicePage{
 
 	private static Logger log = Logger.getLogger(BrowseDevice.class);	
+	DeviceBrand devicebrand = new DeviceBrand();
 	
 @When("^Click on any Device in catalog$")	
 	public void selectDevice_Verify()  throws Exception{
@@ -135,5 +136,19 @@ public void agentSelect() throws Exception{
 		e.printStackTrace();
 		throw(e);
 	}
+}
+@When("^I select a device with its customization$")
+public void select_device_customize() throws Exception
+{
+	try{
+		ExtentReporter.reportStep("BDD Step: When I select a device with its customization", "INFO");
+		devicebrand.selectDeviceBrand();
+		devicebrand.redirectedToBrowseDevice();
+		agentSelect();
+	}catch(Exception e){
+		e.printStackTrace();
+		throw(e);
+}
+
 }
 }

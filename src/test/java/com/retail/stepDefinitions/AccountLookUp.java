@@ -16,6 +16,9 @@ public class AccountLookUp extends AccountLookUpPage{
 	CustomerInfo custMoreInfoObj= new CustomerInfo();
 	AccountDetailsPage acctDetail= new AccountDetailsPage();
 	CustomerPreSignaturePage custPage= new CustomerPreSignaturePage();
+	DeviceBrand devicebrand= new DeviceBrand();
+	BrowseDevice browseDevice= new BrowseDevice();
+	
 		
 	@When("^I enter valid account number$")
 	public void enterValidAcctNumber() throws Exception
@@ -33,7 +36,7 @@ public class AccountLookUp extends AccountLookUpPage{
 	}		
 	
 	@And("^I click on Look Up$")
-	public void clickOnLookUp() throws Exception
+	public void clickOnLookUp()
 	{
 		try {
 			ExtentReporter.reportStep("BDD Step: I click on Look Up", "INFO");
@@ -41,22 +44,22 @@ public class AccountLookUp extends AccountLookUpPage{
 			log.info("Clicked on Look Up Button");	
 			Thread.sleep(5000);	
 		    verifyText("Please validate customer ID");
-
+			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in clickOnLookUp(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
 		}
 	}
 	@And("^I click on Look Up button$")
-	public void clickOnLookUpbutton() throws Exception
+	public void clickOnLookUpButton()
 	{
 		try {
 			ExtentReporter.reportStep("BDD Step: I click on Look Up button", "INFO");
 			clickElement(AccountLookUpPage.lookUpButton);
 			log.info("Clicked on Look Up Button");	
 			Thread.sleep(5000);	
-
-
+			
+			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in clickOnLookUp(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
@@ -618,7 +621,22 @@ public class AccountLookUp extends AccountLookUpPage{
 			throw(e);
 		}
 	}
-	
+	@Then("^I redirected to account lookup$")
+	public void redirected_accountlookup() throws Exception 
+	{
+		try{
+			isElementDisplayed(AccountLookUpPage.lookUP_header,5);
+		
+		log.info("Back to Profile button is clicked");
+			
+	}
+		catch(Exception e){
+			log.error("pop up is not displayed");
+			e.printStackTrace();
+			throw(e);
+		}
+	}
+
 	
 }
 

@@ -11,10 +11,9 @@ import cucumber.api.java.en.*;
 public class DeviceBrand extends DeviceBrandPage{
 
 	private static Logger log = Logger.getLogger(DeviceBrand.class);
-	BrowseDevice BrowseDevice = new BrowseDevice();
 	
 	
-@When("^I select a device$")	
+@When("^I select a device brand$")	
 	public void selectDeviceBrand() throws Exception {
 		try {
 			String flag=getXMLData("flag");
@@ -34,7 +33,7 @@ public class DeviceBrand extends DeviceBrandPage{
 			throw(e);
 		}
 	}
-@Then("^Then I am redirected to Browse_Devices page$")
+@Then("^I am redirected to Browse_Devices page$")
 public void redirectedToBrowseDevice() throws Exception{
 	try {
 		isElementDisplayed(BrowseDevicePage.deviceButton,10);
@@ -104,4 +103,33 @@ public void viewCatalog() {
 	throw(e);
 }
 }
+@Then("^I am in Device_Brands page$")
+public void Device_Brand() throws Exception 
+{
+	try{
+		isElementDisplayed(DeviceBrandPage.PhoneByBrand,5);
+	log.info("In Device_Brands page");
+		
+}
+	catch(Exception e){
+		log.error("Error in DeviceBrand page");
+		e.printStackTrace();
+		throw(e);
+	}
+}
+@Then("^I see tabs- Phones by Brand and Accessory$")
+public void tabs_deviceBrand() throws Exception 
+{
+	try{
+		isElementDisplayed(DeviceBrandPage.PhoneByBrand,5);
+	log.info("Tabs in device page is displayed");
+		
+}
+	catch(Exception e){
+		log.error("Error in DeviceBrand page");
+		e.printStackTrace();
+		throw(e);
+	}
+}
+
 }

@@ -5,28 +5,28 @@ As an agent,I need to support customer for shopping XFINITY Mobile products and 
 Background: 
 Given I launch the Retail application as an agent
 
-@Validateinfo
+@Validateinfo @adet
 Scenario: Validate the customer information in Account Details Page
     Given I am in Device details page
     Then I see the customer details
  
- @launchmobile   
+ @launchmobile   @adet
 Scenario: Verify the Launch Mobile
 	Given I am in Device details page
 	When I click Launch Mobile
 	Then I see the Customer Information page
 	
- @appointment	
+ @appointment	@adet
 Scenario: Validate the Appointments section
 Given I am in Device details page
 Then I see the appointment details
 
-@serviceimages
+@serviceimages @adet
 Scenario: Validate the service images are displayed (TV, Wifi, Phone)
 Given I am in Device details page
 Then I see the service images
 
-@viewall
+@viewall @adet
 Scenario: Verify the View All link
 Given I am in Device details page
 When I click on View All

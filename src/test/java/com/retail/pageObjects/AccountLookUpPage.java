@@ -15,6 +15,7 @@ public class AccountLookUpPage extends WebOperations{
 	driverLicense = By.xpath("//A[@href='javascript:;'][text()='Driver ’s License']"),
 	stateID = By.xpath("//A[@href='javascript:;'][text()='State ID']"),
 	USPassport = By.xpath("//A[@href='javascript:;'][text()='US Passport']"),
+	lookUP_header = By.xpath("//h3[text()='Look Up Customer']"),
 	
 	scanbill = By.xpath("//button[@class='md-primary barcode md-button md-ink-ripple']"),
 	scanclose = By.xpath("//md-dialog[@class='_md md-transition-in']//md-icon[text()=' clear ']"),

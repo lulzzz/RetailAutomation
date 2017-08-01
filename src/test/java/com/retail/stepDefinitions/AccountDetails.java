@@ -26,8 +26,7 @@ public class AccountDetails extends AccountDetailsPage{
 			{						
 				clickElement(AccountDetailsPage.launchMobileBtn);	
 			}				
-			log.info("Clicked on Launch Mobile");			
-			
+			log.info("Clicked on Launch Mobile");				
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in Account_Details_launchMobile(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();

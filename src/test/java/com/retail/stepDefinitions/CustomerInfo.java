@@ -59,6 +59,12 @@ public class CustomerInfo extends CustomerInfoPage{
 				typeValue(CustomerInfoPage.ssnField,getXMLData("SSN"));				
 				log.info("SSN is entered");	
 			}
+			if(isElementDisplayed(CustomerInfoPage.ssnField2,10))
+			{
+				clickElement(CustomerInfoPage.ssnField2);
+				typeValue(CustomerInfoPage.ssnField2,getXMLData("SSN2"));				
+				log.info("SSN is entered");	
+			}
 			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in CustomerMoreInfo_enterValidSSN(): " + LogUtils.logStackTrace(e));
