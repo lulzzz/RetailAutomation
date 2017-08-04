@@ -16,6 +16,9 @@ public class AccountLookUp extends AccountLookUpPage{
 	CustomerInfo custMoreInfoObj= new CustomerInfo();
 	AccountDetailsPage acctDetail= new AccountDetailsPage();
 	CustomerPreSignaturePage custPage= new CustomerPreSignaturePage();
+	DeviceBrand devicebrand= new DeviceBrand();
+	BrowseDevice browseDevice= new BrowseDevice();
+	
 		
 	@When("^I enter valid account number$")
 	public void enterValidAcctNumber() throws Exception
@@ -33,30 +36,29 @@ public class AccountLookUp extends AccountLookUpPage{
 	}		
 	
 	@And("^I click on Look Up$")
-	public void clickOnLookUp() throws Exception
+	public void clickOnLookUp()
 	{
 		try {
 			ExtentReporter.reportStep("BDD Step: I click on Look Up", "INFO");
 			clickElement(AccountLookUpPage.lookUpButton);
 			log.info("Clicked on Look Up Button");	
-			Thread.sleep(5000);	
-		    verifyText("Please validate customer ID");
 
+			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in clickOnLookUp(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
 		}
 	}
 	@And("^I click on Look Up button$")
-	public void clickOnLookUpbutton() throws Exception
+	public void clickOnLookUpButton()
 	{
 		try {
 			ExtentReporter.reportStep("BDD Step: I click on Look Up button", "INFO");
 			clickElement(AccountLookUpPage.lookUpButton);
 			log.info("Clicked on Look Up Button");	
 			Thread.sleep(5000);	
-
-
+			
+			
 		}catch (Exception e) {
 			log.error("GOT EXCEPTION in clickOnLookUp(): " + LogUtils.logStackTrace(e));
 			e.printStackTrace();
@@ -69,18 +71,26 @@ public class AccountLookUp extends AccountLookUpPage{
 		try {	
 			ExtentReporter.reportStep("BDD Step: Then I see the customer ID validation to launch the customer details", "INFO");
 			//Customer ID Validation
+			Thread.sleep(5000);	
+		    verifyText("Please validate customer ID");
 			String customer_ID= getXMLData("ID_Validation").toUpperCase();
 			log.info(customer_ID);
 			if(customer_ID.equalsIgnoreCase("Driver License"))
 			{				
 				log.info("Validated Customer ID using Driver License");
+				isElementDisplayed(AccountLookUpPage.driverLicense,5);
+				ExtentReporter.reportStep(getDriver(), "Element Driver License is displayed." , "INFO", 0);
 				clickElement(AccountLookUpPage.driverLicense);				
 			}else if(customer_ID.equalsIgnoreCase("State ID"))
 			{
+				isElementDisplayed(AccountLookUpPage.stateID,5);
+				ExtentReporter.reportStep(getDriver(), "Element State ID is displayed." , "INFO", 0);
 				clickElement(AccountLookUpPage.stateID);
 				log.info("Validated Customer ID using State ID");
 			}else if(customer_ID.equalsIgnoreCase("US Passport"))
 			{
+				isElementDisplayed(AccountLookUpPage.USPassport,5);
+				ExtentReporter.reportStep(getDriver(), "Element US PASSPORT is displayed." , "INFO", 0);
 				clickElement(AccountLookUpPage.USPassport);
 				log.info("Validated Customer ID using US Passport");
 			}
@@ -173,7 +183,7 @@ public class AccountLookUp extends AccountLookUpPage{
 			throw(e);
 		}
 	}
-	@When("^I click on Scan Bill$")
+	@When("^I click on Scan Bill button$")
 	public void scanbill()  {
 		try {
 			ExtentReporter.reportStep("BDD Step: I click on Scan Bill", "INFO");
@@ -192,7 +202,14 @@ public class AccountLookUp extends AccountLookUpPage{
 	public void barcodetext()  {
 		try {
 			ExtentReporter.reportStep("BDD Step: I see the Scan Barcode Now Text", "INFO");
-			verifyText("Scan Barcode Now");
+			if(isElementDisplayed(AccountLookUpPage.Scan_Text,5))
+			{
+			ExtentReporter.reportStep(getDriver(),"Scan Barcode is displayed","INFO",0);	
+			}
+			else
+			{
+				ExtentReporter.reportStep(getDriver(),"Scan Barcode is not displayed","INFO",0);	
+			}
 			log.info("Scan Barcode Now text is displayed");
 			
 		}catch (Exception e) {
@@ -205,6 +222,7 @@ public class AccountLookUp extends AccountLookUpPage{
 		try {
 			ExtentReporter.reportStep("BDD Step: I see error message", "INFO");
 			verifyText("Please enter first and last name, email address, phone");
+			ExtentReporter.reportStep(getDriver(),"Error Message is displayed","INFO",0);	
 			log.info("Error message is displayed");
 			
 		}catch (Exception e) {
@@ -230,9 +248,10 @@ public class AccountLookUp extends AccountLookUpPage{
 	@Then("^I see the Look Up Page$")
 	public void lookup() {
 		try {
-			ExtentReporter.reportStep("BDD Step: I see the Look Up Page", "INFO");
+			ExtentReporter.reportStep(getDriver(),"BDD Step: I see the Look Up Page","INFO",0);	
 			verifyText("Look Up Customer");
 			verifyText("Scan Bill");
+			
 		}
 		catch (Exception e) {
 			log.error("GOT EXCEPTION in scanclose(): " + LogUtils.logStackTrace(e));
@@ -286,7 +305,7 @@ public class AccountLookUp extends AccountLookUpPage{
 	}
 			
 			
-	@When("^I click on Driver's License$")
+	@When("^I click on Driver's License in Customer validation popup$")
 	public void driverslicense()  {
 		try {
 			ExtentReporter.reportStep("BDD Step: I click on Driver's License", "INFO");
@@ -304,12 +323,12 @@ public class AccountLookUp extends AccountLookUpPage{
 	@Then("^I see the account details page$")
 	public void accountdetails()  {
 		try {
-			ExtentReporter.reportStep("BDD Step: I see the account details page", "INFO");
 			verifyText("Account Status");
 			verifyText("Appointments");
 			verifyText("Notes");
 			verifyText("Mobile Details");
 			verifyText("R360 Loads");
+			ExtentReporter.reportStep(getDriver(),"BDD Step: I see the account details page","INFO",0);	
 			log.info("Account Details Page is displayed");
 				
 			}
@@ -320,7 +339,7 @@ public class AccountLookUp extends AccountLookUpPage{
 	}	
 }
 	
-	@When("^I click on State ID$")
+	@When("^I click on State ID in Customer validation popup$")
 	public void stateID()  {
 		try {
 			ExtentReporter.reportStep("BDD Step: I click on State ID", "INFO");
@@ -371,7 +390,7 @@ public class AccountLookUp extends AccountLookUpPage{
 		}
 	}
 	
-	@When("^I click on US Passport$")
+	@When("^I click on US Passport in Customer validation popup$")
 	public void USpassport()  {
 		try {
 			ExtentReporter.reportStep("BDD Step: I click on US Passport", "INFO");
@@ -404,9 +423,10 @@ public class AccountLookUp extends AccountLookUpPage{
 	@Then("^I see the SSN validation page$")
 	public void SSNvalidationpage()  {
 		try {
-			ExtentReporter.reportStep("BDD Step: I see the SSN validation page", "INFO");
+		
 			verifyText("SSN Validation");
 			verifyText("Enter last four digits of customer social security number");
+			ExtentReporter.reportStep(getDriver(),"BDD Step: I see the SSN validation page","INFO",0);	
 			log.info("Clicked ID does not match above address or no ID available ");
 			Thread.sleep(5000);
 		}
@@ -618,7 +638,22 @@ public class AccountLookUp extends AccountLookUpPage{
 			throw(e);
 		}
 	}
-	
+	@Then("^I redirected to account lookup$")
+	public void redirected_accountlookup() throws Exception 
+	{
+		try{
+			isElementDisplayed(AccountLookUpPage.lookUP_header,5);
+		
+		log.info("Back to Profile button is clicked");
+			
+	}
+		catch(Exception e){
+			log.error("pop up is not displayed");
+			e.printStackTrace();
+			throw(e);
+		}
+	}
+
 	
 }
 

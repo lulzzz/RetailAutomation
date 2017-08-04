@@ -1,6 +1,6 @@
 <testcases>
 	<testcase name="Placing a single ACME device in store order through Scan option">
-		<property name="AccountNumber" value="8069100010266707" />	
+		<property name="AccountNumber" value="8498330020063866" />	
 		<property name="flag" value="S" />	
 		<property name="ID_Validation" value="Driver License" />	
 		<property name="Store_Name" value="Havertown" />
@@ -9,14 +9,15 @@
 		<property name="city" value="Havertown" />
 		<property name="state" value="PA" />
 		<property name="zipcode" value="19083" />
-		<property name="SSN" value="1111" />	
+	    <property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />		
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
 		<property name="DOB" value="1985" />
 		<property name="IMEInumber" value="359463070026544" />	
 		<property name="SIMnumber" value="73461234613846384713" />	
 		<property name="PaymentPlan" value="Pay In Full" />
-		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption" value="Unlimited" />	
 		<property name="ChooseNumber" value="Get New Number" />		
 		<property name="CurrentPhoneNumber" value="5419670010" />
@@ -33,7 +34,8 @@
 		<property name="AccountNumber" value="8069100010266707" />	
 		<property name="flag" value="S" />	
 		<property name="ID_Validation" value="State ID" />	
-		<property name="SSN" value="1111" />	
+	    <property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />		
 		<property name="Store_Name" value="Havertown" />
 		<property name="Store_Number" value="999" />
 		<property name="Address" value="116 W Township Line Road, Unit 500" />
@@ -46,7 +48,7 @@
 		<property name="IMEInumber" value="354956073094943" />	
 		<property name="SIMnumber" value="73461234613846384713" />	
 		<property name="PaymentPlan" value="Pay In Full" />
-		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption" value="Unlimited" />	
 		<property name="ChooseNumber" value="Get New Number" />		
 		<property name="CurrentPhoneNumber" value="5419670010" />
@@ -60,7 +62,7 @@
 		<property name="Ship_Flow" value="No" />
 	</testcase>
 	<testcase name="Placing an ANDROID single device in store order through Verify Link option">
-		<property name="AccountNumber" value="8069100010266707" />		
+		<property name="AccountNumber" value="8498350172134422" />		
 		<property name="ID_Validation" value="US Passport" />	
 		<property name="Store_Name" value="Havertown" />
 		<property name="Store_Number" value="999" />
@@ -70,11 +72,12 @@
 		<property name="zipcode" value="19083" />
 		<property name="flag" value="S" />	
 		<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />	
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
 		<property name="DOB" value="1985" />
 		<property name="PaymentPlan" value="Pay In Full" />
-		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption" value="Unlimited" />	
 		<property name="ChooseNumber" value="Get New Number" />		
 		<property name="CurrentPhoneNumber" value="5419670010" />
@@ -101,12 +104,13 @@
 		<property name="state" value="PA" />
 		<property name="zipcode" value="19083" />
 		<property name="flag" value="S" />	
-		<property name="SSN" value="1111" />	
+	    <property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
 		<property name="DOB" value="1985" />
 		<property name="PaymentPlan" value="Pay In Full" />
-		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption" value="Unlimited" />	
 		<property name="ChooseNumber" value="Get New Number" />		
 		<property name="CurrentPhoneNumber" value="5419670010" />
@@ -134,6 +138,7 @@
 		<property name="zipcode" value="19083" />
 		<property name="flag" value="S" />	
 		<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="Just Accessories" />		
 		<property name="DOB" value="1985" />
@@ -151,15 +156,16 @@
 		<property name="state" value="PA" />
 		<property name="zipcode" value="19083" />	
 		<property name="flag" value="S" />	
-		<property name="SSN" value="1111" />	
+	    <property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="Just Accessories" />		
 		<property name="DOB" value="1985" />
 		<property name="AccessoryCategory" value="audio" />		
 	</testcase>
 	
-	<testcase name="Placing hybrid devices in store order-Scan">
-		<property name="AccountNumber" value="8498330020063866" />	
+	<testcase name="Placing hybrid devices in store order through Scan option">
+		<property name="AccountNumber" value="8069100010219342" />	
 		<property name="flag" value="H" />	
 		<property name="Store_Name" value="Havertown" />
 		<property name="Store_Number" value="999" />
@@ -168,19 +174,20 @@
 		<property name="state" value="PA" />
 		<property name="zipcode" value="19083" />
 		<property name="ID_Validation" value="Driver License" />	
-		<property name="SSN" value="1111" />	
+     	<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="2" />		
 		<property name="DOB" value="1985" />
 		<property name="IMEInumber1" value="354956073094943" />	
 		<property name="SIMnumber1" value="73461234613846384713" />	
 		<property name="IMEInumber2" value="359463070026544" />	
-		<property name="SIMnumber2" value="73461234613846384313" />	
+		<property name="SIMnumber2" value="73461234613846384314" />	
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="PaymentPlan2" value="Pay In Full" />
-		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DeviceProtection2" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption2" value="Unlimited" />	
 		<property name="ChooseNumber1" value="Get New Number" />	
 		<property name="ChooseNumber2" value="Get New Number" />			
@@ -207,6 +214,7 @@
 		<property name="zipcode" value="19083" />
 		<property name="ID_Validation" value="Driver License" />	
 		<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="2" />		
 		<property name="DOB" value="1985" />
@@ -221,19 +229,19 @@
 		<property name="SIMnumber4" value="73461234613846384743" />	
 		<property name="SIMnumber5" value="73461234613846384753" />
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="PaymentPlan2" value="Pay In Full" />
-		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DeviceProtection2" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption2" value="Unlimited" />
 		<property name="PaymentPlan3" value="Pay In Full" />
-		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DeviceProtection3" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption3" value="Unlimited" />	
 		<property name="PaymentPlan4" value="Pay In Full" />
-		<property name="DeviceProtection4" value="withXMPP" />	
+		<property name="DeviceProtection4" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption4" value="Unlimited" />	
 		<property name="PaymentPlan5" value="Pay In Full" />
-		<property name="DeviceProtection5" value="withXMPP" />	
+		<property name="DeviceProtection5" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption5" value="Unlimited" />		
 		<property name="ChooseNumber1" value="Get New Number" />	
 		<property name="ChooseNumber2" value="Get New Number" />
@@ -259,7 +267,7 @@
 	</testcase>
 	<testcase name="Placing 5 devices in store order for first-time user through verify">
 	     <property name="flag" value="H" />	
-		<property name="AccountNumber" value="8069100020053459" />		
+		<property name="AccountNumber" value="8498330020063866" />		
 		<property name="ID_Validation" value="Driver License" />	
 		<property name="Store_Name" value="Havertown" />
 		<property name="Store_Number" value="999" />
@@ -268,23 +276,24 @@
 		<property name="state" value="PA" />
 		<property name="zipcode" value="19083" />
 		<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />	
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
 		<property name="DOB" value="1985" />
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="PaymentPlan2" value="Pay In Full" />
-		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DeviceProtection2" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption2" value="Unlimited" />
 		<property name="PaymentPlan3" value="Pay In Full" />
-		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DeviceProtection3" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption3" value="Unlimited" />	
 		<property name="PaymentPlan4" value="Pay In Full" />
-		<property name="DeviceProtection4" value="withXMPP" />	
+		<property name="DeviceProtection4" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption4" value="Unlimited" />	
 		<property name="PaymentPlan5" value="Pay In Full" />
-		<property name="DeviceProtection5" value="withXMPP" />	
+		<property name="DeviceProtection5" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption5" value="Unlimited" />		
 		<property name="ChooseNumber1" value="Get New Number" />	
 		<property name="ChooseNumber2" value="Get New Number" />
@@ -297,8 +306,8 @@
 		<property name="CurrentPhoneNumber4" value="5419670020" />
 		<property name="CurrentPhoneNumber5" value="5419670020" />
 		<property name="Color1" value="Gold" />
-        <property name="Color2" value="Gold Platinum" />
-        <property name="Color3" value="Gold" />
+        <property name="Color2" value="Black Onyx" />
+        <property name="Color3" value="Rose Gold" />
         <property name="Color4" value="Black Onyx" />
         <property name="Color5" value="Titan Black" />
 		<property name="Name1" value="Xfinity1" />
@@ -313,14 +322,14 @@
 		<property name="Email_Address" value="Frontend_427@comcast.net" />
 		<property name="Phone_Number" value="5467891234" />	
 		<property name="Device_Name1" value="Apple iPhone 7 Plus" />
-		<property name="Device_Name2" value="Samsung Galaxy S7 edge" />
+		<property name="Device_Name2" value="Samsung SEA Galaxy S7 edge" />
 		<property name="Device_Name3" value="Apple iPhone 7" />
-		<property name="Device_Name4" value="Modesto TEST Galaxy S7" />
+		<property name="Device_Name4" value="Lifeproof TEST Galaxy S7" />
         <property name="Device_Name5" value="LG X power" /> 
 		<property name="DeviceBrandName1" value="Apple" />
-		<property name="DeviceBrandName2" value="Samsung" />
+		<property name="DeviceBrandName2" value="Samsung SEA" />
 		<property name="DeviceBrandName3" value="Apple" />
-		<property name="DeviceBrandName4" value="Modesto" />
+		<property name="DeviceBrandName4" value="Lifeproof" />
 		<property name="DeviceBrandName5" value="LG" />
 		<property name="Capacity1" value="32gb" />
 		<property name="Capacity2" value="32gb" />
@@ -330,7 +339,7 @@
 		</testcase>
 		<testcase name="Placing hybrid devices in store order-Verify">
 	     <property name="flag" value="H" />	
-		<property name="AccountNumber" value="8069100020053467" />		
+		<property name="AccountNumber" value="8498330020063866" />		
 		<property name="ID_Validation" value="Driver License" />
 		<property name="Store_Name" value="Havertown" />
 		<property name="Store_Number" value="999" />
@@ -338,15 +347,16 @@
 		<property name="city" value="Havertown" />
 		<property name="state" value="PA" />
 		<property name="zipcode" value="19083" />	
-		<property name="SSN" value="1111" />	
+	    <property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
 		<property name="DOB" value="1985" />
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="PaymentPlan2" value="Pay In Full" />
-		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DeviceProtection2" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption2" value="Unlimited" />	
 		<property name="ChooseNumber1" value="Get New Number" />	
 		<property name="ChooseNumber2" value="Get New Number" />			
@@ -379,15 +389,16 @@
 		<property name="city" value="Havertown" />
 		<property name="state" value="PA" />
 		<property name="zipcode" value="19083" />
-		<property name="SSN" value="1111" />	
+    	<property name="SSN" value="1111" />	
+	  	<property name="SSN2" value="111111111" />
 		<property name="DOB" value="08/08/1985" />
 		<property name="NumberOfLines" value="1" />		
 		<property name="DOB" value="1985" />
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="PaymentPlan2" value="Pay In Full" />
-		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DeviceProtection2" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption2" value="Unlimited" />	
 		<property name="ChooseNumber" value="Get New Number" />		
 		<property name="CurrentPhoneNumber" value="5419670010" />
@@ -425,10 +436,10 @@
 		<property name="NumberOfLines" value="1" />		
 		<property name="DOB" value="1985" />
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="PaymentPlan2" value="Pay In Full" />
-		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DeviceProtection2" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption2" value="Unlimited" />	
 		<property name="ChooseNumber" value="Get New Number" />		
 		<property name="CurrentPhoneNumber" value="5419670010" />
@@ -458,7 +469,7 @@
 <testcase name="Placing single device and single accessory through verify link option">
 		<property name="AccountNumber" value="8498330020063866" />			
 		<property name="ID_Validation" value="US Passport" />	
-		<property name="SSN" value="1111" />	
+		<property name="SSN" value="111111111" />	
 		<property name="Store_Name" value="Havertown" />
 		<property name="Store_Number" value="999" />
 		<property name="Address" value="116 W Township Line Road, Unit 500" />
@@ -472,13 +483,13 @@
 		<property name="Capacity" value="32gb" />
 		<property name="Color" value="Gold" />
 		<property name="PaymentPlan" value="Pay In Full" />
-		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption" value="Unlimited" />	
 		<property name="ChooseNumber" value="Get New Number" />	
 		<property name="Name" value="Xfinity" />
 		<property name="flag" value="S" />	
-		<property name="AccessoryName" value="Random Order 2.4A Micro USB DUO Car Charger" />
-		<property name="ColorAccessory" value="Black" />
+		<property name="AccessoryName" value="Random Order Galaxy S7 edge Screen Protection" />
+		<property name="ColorAccessory" value="Clear" />
 		<property name="CreditCardNumber" value="41111111111111111" />		
 		<property name="Expiration" value="1019" />
 		<property name="CVV" value="123" />
@@ -502,7 +513,7 @@
 		<property name="Capacity1" value="32gb" />
 		<property name="Color1" value="Gold" />
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="ChooseNumber" value="Get New Number" />	
 		<property name="flag" value="H" />	
@@ -543,23 +554,23 @@
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="US Passport" />	
 	</testcase>
-	<testcase name="Verify the View All link">
+	<testcase name="Verify the View All link in Notes Section with predefined Notes">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="US Passport" />	
 	</testcase>
-	<testcase name="Verify the Add Note link displays the New Note">
+	<testcase name="Verify the Add Note link displays the Add New Note in Notes section">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="US Passport" />	
 	</testcase>
-	<testcase name="Validate the New Note page (displays the Select Note Type, Subject, Message)">
+	<testcase name="Validate the Add New Note popup after clicking Add Note in Notes section">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="US Passport" />	
 	</testcase>
-	<testcase name="Click on Close in the Add New Note page">
+	<testcase name="Verify if Close button is clickable when Add Note is clicked in Notes section">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="US Passport" />	
 	</testcase>
-	<testcase name="Click on Cancel in the Add New Note page">
+	<testcase name="Verify if Cancel button is clickable when Add Note is clicked in Notes section">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="US Passport" />	
 	</testcase>
@@ -576,55 +587,55 @@
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="US Passport" />
 	</testcase>	
-	<testcase name="Validate the Driver's License">
+	<testcase name="Validate the Driver's License in Customer validation popup">
 		<property name="LookUpInput" value="AccountNumber" />
 		<property name="AccountNumber" value="8069100020038930" />
 	</testcase>	
-	<testcase name="Validate the State ID">
+	<testcase name="Validate the State ID in Customer validation popup">
 		<property name="LookUpInput" value="AccountNumber" />
 		<property name="AccountNumber" value="8069100020038930" />
 	</testcase>	
-	<testcase name="Validate the US Passport">
+	<testcase name="Validate the US Passport in Customer validation popup">
 		<property name="LookUpInput" value="AccountNumber" />
 		<property name="AccountNumber" value="8069100020038930" />
 	</testcase>
-	<testcase name="Valid Email and click on Look Up">
+	<testcase name="Enter valid Email and click on Look Up">
 		<property name="ValidEmail" value="Frontend_427@comcast.net" />
 		<property name="ID_Validation" value="Driver License" />		
 	</testcase>	
-	<testcase name="Valid Account Number and click on Look Up">
+	<testcase name="Enter valid Account Number and click on Look Up">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 	</testcase>
-	<testcase name="Invalid Email and click on Look Up">
+	<testcase name="Enter invalid Email and click on Look Up">
 		<property name="InvalidEmail" value="comcast.net" />		
 	</testcase>
-	<testcase name="Invalid Name and click on Look Up">
+	<testcase name="Enter invalid Name and click on Look Up">
 		<property name="InvalidName" value="ejrherherher" />
 	</testcase>
-	<testcase name="Invalid Phone Number and click on Look Up">
+	<testcase name="Enter invalid Phone Number and click on Look Up">
 		<property name="InvalidPhone" value="0000000000" />
 	</testcase>
 	
-	<testcase name="Validate ID does not match link navigates to SSN validation">
+	<testcase name="Validate ID does not match link in Customer validation popup">
 		<property name="LookUpInput" value="AccountNumber" />
 		<property name="AccountNumber" value="8069100020038930" />
 	</testcase>
-	<testcase name="Validate customerId with valid SSN">
+	<testcase name="Validate customerId with valid SSN in SSN validation POPUP">
 		<property name="LookUpInput" value="AccountNumber" />
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="validSSN" value="1111" />
 	</testcase>
-	<testcase name="Validate customerId with incorrect SSN">
+	<testcase name=" Validate customerId with incorrect SSN in SSN validation POPUP">
 		<property name="LookUpInput" value="AccountNumber" />
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="incorrectSSN" value="1855" />
 	</testcase>	
-	<testcase name="Verification of close button for SSN validation Page">
+	<testcase name="Verification of close button for SSN validation POPUP">
 		<property name="LookUpInput" value="AccountNumber" />
 		<property name="AccountNumber" value="8069100020038930" />
 	</testcase>
-	<testcase name="Verification of cancel button for SSN validation Page">
+	<testcase name="Verification of cancel button for SSN validation POPUP">
 		<property name="LookUpInput" value="AccountNumber" />
 		<property name="AccountNumber" value="8069100020038930" />
 	</testcase>	
@@ -637,14 +648,14 @@
 		<property name="LookUpInput" value="AccountNumber" />
 		<property name="AccountNumber" value="8069100020038930" />
 	</testcase>
-	<testcase name="Invalid Account Number and click on Look Up">
+	<testcase name="Enter invalid Account Number and click on Look Up">
 		<property name="InvalidAccountNumber" value="221321321312321434545342343423432434" />		
 	</testcase>
-	<testcase name="Validate the Back button">
+	<testcase name="Validate the Back button in view_notes page">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 	</testcase>	
-	<testcase name="Validate the sorting button is displayed in Date/Time">
+	<testcase name="Validate the sorting button is displayed in Date/Time of view_notes page">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 	</testcase>	
@@ -754,13 +765,13 @@
 		<property name="SIMnumber2" value="73461234613846384713" />
 		<property name="SIMnumber3" value="73461234613846384733" />
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="PaymentPlan2" value="Pay In Full" />
-		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DeviceProtection2" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption2" value="Unlimited" />
 		<property name="PaymentPlan3" value="Pay In Full" />
-		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DeviceProtection3" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption3" value="Unlimited" />	
 		<property name="ChooseNumber1" value="Get New Number" />	
 		<property name="ChooseNumber2" value="Get New Number" />
@@ -793,13 +804,13 @@
 		<property name="NumberOfLines" value="1" />		
 		<property name="DOB" value="1985" />
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="PaymentPlan2" value="Pay In Full" />
-		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DeviceProtection2" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption2" value="Unlimited" />
 		<property name="PaymentPlan3" value="Pay In Full" />
-		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DeviceProtection3" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption3" value="Unlimited" />		
 		<property name="ChooseNumber1" value="Get New Number" />	
 		<property name="ChooseNumber2" value="Get New Number" />
@@ -838,7 +849,7 @@
 		<property name="ID_Validation" value="Driver License" />
 			<property name="notetype" value="RETENTION"/>
 	</testcase>
-	<testcase name="Verify the View Bill">
+	<testcase name="Verify the View Bill with Bills paid">
 		<property name="AccountNumber" value="8299400280104584" />
 		<property name="ID_Validation" value="Driver License" />
 			<property name="notetype" value="RETENTION"/>
@@ -848,32 +859,32 @@
 		<property name="ID_Validation" value="Driver License" />
 			<property name="notetype" value="RETENTION"/>
 	</testcase>
-	<testcase name="Click on Ok in the Message required text">
+	<testcase name="Verify if Ok button is clickable when Add Note is clicked after selecting Note Type from Add New Note pop up">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 			<property name="notetype" value="RETENTION"/>
 	</testcase>
-	<testcase name="Click on Close in the Message required text">
+	<testcase name="Verify if Close button is clickable when Add Note is clicked after selecting Note Type from Add New Note pop up">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 			<property name="notetype" value="RETENTION"/>
 	</testcase>
-	<testcase name="Verify the Message required text,add message (Click on Add Note after selecting note type and without message)">
+	<testcase name="Verify the Message required text when Add Note is clicked after selecting Note Type from Add New Note pop up">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 		<property name="notetype" value="RETENTION"/>
 	</testcase>
-	<testcase name="Click on Ok in the Note type required text">
+	<testcase name="Verify if Ok button is clickable when Add Note is clicked from Add New Note pop up">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 			<property name="notetype" value="RETENTION"/>
 	</testcase>
-	<testcase name="Click on Close in the Note type required text">
+	<testcase name="Verify if Close button is clickable when Add Note is clicked from Add New Note pop up">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 			<property name="notetype" value="RETENTION"/>
 	</testcase>
-	<testcase name="Verify the Note type required text - select a note type">
+	<testcase name="Verify the Note type required text when Add Note is clicked from Add New Note pop up">
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 			<property name="notetype" value="RETENTION"/>
@@ -908,7 +919,7 @@
 		<property name="Phone_Number" value="5467891234" />	
 	</testcase>
 		<testcase name="Placing a Single device by giving invalid IMEI number results in error message">
-		<property name="AccountNumber" value="8498330020063866" />		
+		<property name="AccountNumber" value="8299400280104584" />		
 		<property name="ID_Validation" value="Driver License" />
 		<property name="Store_Name" value="Havertown" />
 		<property name="Store_Number" value="999" />
@@ -953,16 +964,16 @@
 		<property name="SIMnumber4" value="73461234613846384743" />	
 		<property name="SIMnumber5" value="73461234613846384753" />
 		<property name="PaymentPlan1" value="Pay In Full" />
-		<property name="DeviceProtection1" value="withXMPP" />	
+		<property name="DeviceProtection1" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption1" value="Unlimited" />	
 		<property name="PaymentPlan2" value="Pay In Full" />
-		<property name="DeviceProtection2" value="withXMPP" />	
+		<property name="DeviceProtection2" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption2" value="Unlimited" />
 		<property name="PaymentPlan3" value="Pay In Full" />
-		<property name="DeviceProtection3" value="withXMPP" />	
+		<property name="DeviceProtection3" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption3" value="Unlimited" />	
 		<property name="PaymentPlan4" value="Pay In Full" />
-		<property name="DeviceProtection4" value="withXMPP" />	
+		<property name="DeviceProtection4" value="Xfinity Mobile Protection Plan (XMPP)" />	
 		<property name="DataOption4" value="Unlimited" />	
 		<property name="ChooseNumber1" value="Get New Number" />	
 		<property name="ChooseNumber2" value="Get New Number" />
@@ -997,4 +1008,1394 @@
 		<property name="AccountNumber" value="8069100020038930" />
 		<property name="ID_Validation" value="Driver License" />
 	</testcase>
+	<testcase name="Choose Payment plan through ship flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="choice" value="Payment"/>
+		<property name="PaymentPlan" value="Pay Monthly" />
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+		<testcase name="Choose Payment plan through scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="choice" value="Payment"/>
+		<property name="PaymentPlan" value="Pay Monthly" />
+		<property name="EditSIM" value="No" />
+		<property name="IMEInumber" value="357811113984951" />	
+		<property name="SIMnumber" value="73461234613846384723" />	
+	</testcase>
+	<testcase name="Choose Data option">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="choice" value="Data"/>
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Choose Device protection Plan through ship flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+    	<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="choice" value="Device"/>
+	    <property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Choose Device protection Plan through scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+    	<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="choice" value="Device"/>
+	    <property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+	    <property name="IMEInumber" value="357811113984951" />	
+		<property name="SIMnumber" value="73461234613846384723" />	
+	</testcase>
+	<testcase name="Clicking on Next button through ship flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+		<testcase name="Clicking on Next button through scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="IMEInumber" value="357811113984951" />	
+		<property name="SIMnumber" value="73461234613846384723" />	
+	</testcase>
+	<testcase name="Clicking on Cancel button through ship flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Clicking on Cancel button through scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	   <property name="IMEInumber" value="357811113984951" />	
+	   <property name="SIMnumber" value="73461234613846384723" />	
+	</testcase>
+<testcase name="Verify in Learn More Popup-Add Protection plan appears when I don't choose XMPP">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="No Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+<testcase name="Verify in Learn More Popup-Remove Protection plan appears when I choose XMPP">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+<testcase name="Verify if different options are available">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Clicking Close icon in Learn more popup">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Clicking Learn more in protection plan through ship flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+		<testcase name="Clicking Learn more in protection plan through scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+<testcase name="Click and verify the links- FAQ,Terms and conditions">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Validating Don't cancel button in the popup">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Validating Back to Profile button in the popup">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Clicking on Change Device link">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Verify if a device is selected, it redirects to Browse_Devices page">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+	</testcase>
+	<testcase name="Validate the Back button">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	</testcase>
+	<testcase name="Search button not enabled when IMEI not entered">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber" value="3549560730" />	
+		<property name="flag" value="S" />
+	</testcase>
+	<testcase name="Search button visible only after the limited digits entered">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber" value="354956073094943" />	
+		<property name="flag" value="S" />
+	</testcase>
+	<testcase name="Entering IMEI with more than 15 digits">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber" value="354956073094943222" />	
+		<property name="flag" value="S" />
+	</testcase>
+	<testcase name="Verify if shipping address is visible">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber" value="354956073094943222" />	
+		<property name="flag" value="S" />
+	</testcase>
+	<testcase name="Clicking Verify Button">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+	</testcase>
+	<testcase name="Verify Device details displayed - Phone name,color,imei">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="IMEInumber" value="354956073094943222" />		
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+	</testcase>
+	<testcase name="Editing the shipping address_KeepAddressAsEntered">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+	</testcase>
+	<testcase name="Entering Valid SIM number">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	<testcase name="Clicking on Cancel button">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	<testcase name="Clicking on Close Button">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	<testcase name="Validation of Add Another Line">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	<testcase name="Validation of Continue Customization">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	
+	<testcase name="Clicking on Next button">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	<testcase name="Clicking BYOD displays settings details">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+	</testcase>
+	<testcase name="Unchecking BYOD not display settings details">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+	</testcase>
+	
+	
+	<testcase name="Entering invalid SIM number">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="7346123461384" />	
+	</testcase>
+	 <testcase name="Verify Phones by brand and Accessories by category is visible">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+	</testcase>
+	 <testcase name="Validate View catalog link for Phones by brand">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+	</testcase>
+	<testcase name="Validate View catalog link for Accessories by Category">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+	</testcase>
+	<testcase name="Verify if Accessory is not visible  until a device is added to cart">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+	</testcase>
+	<testcase name="Verify if Accessory is visible when a device is added to cart">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="AccessoryBrandName" value="cables" />
+	</testcase>
+	<testcase name="Verify if a accessory is selected,it redirects to Browse_Accessories">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+	    <property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="flag" value="S" />	
+		<property name="SSN" value="1111" />	
+		<property name="SSN2" value="111111111" />
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />		
+		<property name="DOB" value="1985" />
+	    <property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+	    <property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="AccessoryBrandName" value="cables" />
+	</testcase>
+	
+	
+	
+	
+	
+	
+<testcase name="Validation of Add a Line button after deleting a line by clicking Cart Icon in Device Config Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	<testcase name="Validation of Back Arrow by clicking Cart Icon in Device Config Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	<testcase name="Validation of Print button in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+	</testcase>
+	<testcase name="Validation of Continue to Checkout button in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+	</testcase>
+	<testcase name="Validation of Delete Line by clicking Edit Cart(Top) button in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+	</testcase>
+	<testcase name="Validation of Delete Line by clicking Edit Cart(Bottom) button in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+	</testcase>
+	<testcase name="Validation of Done button by clicking Edit Cart(Top) button in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+	</testcase>
+	<testcase name="Validation of Done button by clicking Edit Cart(Bottom) button in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+	</testcase>
+	<testcase name="Validation of Payment Details button by clicking Edit Cart(Top) button in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+	</testcase>
+	<testcase name="Validation of Payment Details button by clicking Edit Cart(Bottom) button in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+	</testcase>
+	<testcase name="Validation of Line Details button by clicking Edit Cart(Top) button in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="DeviceName" value="Samsung" />
+		<property name="DeviceColor_Storage" value="Gold Platinum, 32gb" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+	</testcase>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<testcase name="Entering invalid SIM number">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="7346123461384" />	
+	</testcase>
+	 <testcase name="Validation of Add Another Line in Cart Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="withXMPP" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />
+	</testcase>
+	<testcase name="Validation of Continue Customization by clicking Cart Icon in Device Config Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	
+	<testcase name="Validation of Delete Line by clicking Cart Icon in Device Config Page through Scan flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />	
+	</testcase>
+	<testcase name="Validation of Add Another Line in Cart Page through Verify flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />
+		<property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />
+	</testcase>
+	<testcase name="Validation of Print button in Cart Page through Verify flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+		<property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />
+	</testcase>
+<testcase name="Validation of Continue to Checkout button in Cart Page through Verify flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />
+		<property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+<testcase name="Validation of Delete Line by clicking Edit Cart(Top) button in Cart Page through Verify flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />	
+		<property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />
+	</testcase>
+<testcase name="Validation of Delete Line by clicking Edit Cart(Bottom) button in Cart Page through Verify flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />
+		<property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+
+
+
+
+<testcase name="Validation of Done button by clicking Edit Cart(Top) button in Cart Page through Verify flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />
+		<property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	<testcase name="Validation of Done button by clicking Edit Cart(Bottom) button in Cart Page through Verify flow">
+		<property name="AccountNumber" value="8498350172134422" />
+		<property name="ID_Validation" value="Driver License" />
+		<property name="Store_Name" value="Havertown" />
+		<property name="Store_Number" value="999" />
+		<property name="Address" value="116 W Township Line Road, Unit 500" />
+		<property name="city" value="Havertown" />
+		<property name="state" value="PA" />
+		<property name="zipcode" value="19083" />
+		<property name="SSN" value="1111" />	
+		<property name="DOB" value="08/08/1985" />
+		<property name="NumberOfLines" value="1" />
+		<property name="DOB" value="1985" />
+		<property name="flag" value="S" />
+		<property name="IMEInumber" value="359463070026544" />	
+		<property name="SIMnumber" value="73461234613846384713" />
+		<property name="flag" value="S" />	
+		<property name="PaymentPlan" value="Pay In Full" />
+		<property name="DeviceProtection" value="Xfinity Mobile Protection Plan (XMPP)" />	
+		<property name="DataOption" value="Unlimited" />	
+		<property name="ChooseNumber" value="Get New Number" />		
+		<property name="CurrentPhoneNumber" value="5419670010" />
+		<property name="Name" value="Xfinity122311" />
+		<property name="Device_Name" value="Samsung Galaxy S7 edge" />
+		<property name="DeviceBrandName" value="Samsung" />
+		<property name="Capacity" value="32gb" />
+		<property name="Color" value="Black Onyx" />
+		<property name="Ship_Flow" value="Yes" />	
+	</testcase>
+	
+	
+	
+	
 </testcases>

@@ -2,6 +2,9 @@ package com.retail.stepDefinitions;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -9,10 +12,13 @@ import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
 import cucumber.api.java.en.*;
 import com.retail.pageObjects.CustomerInfoPage;
+import com.retail.pageObjects.SignaturePage;
 
 public class CustomerInfo extends CustomerInfoPage{
 
 	private static Logger log = Logger.getLogger(CustomerInfo.class);	
+	
+	GlobalSteps globalStepsObj = new GlobalSteps();
 	
 	@When("^I give valid date or month and click submit$")	
 	public void enterValidDOB() throws Exception {
@@ -20,6 +26,7 @@ public class CustomerInfo extends CustomerInfoPage{
 			ExtentReporter.reportStep("BDD Step: When I give valid date or month and click submit", "INFO");
 			if(isElementDisplayed(CustomerInfoPage.storeName,10))
 			{
+				globalStepsObj.capture_session();
 				clickElement(CustomerInfoPage.storeName);
 				typeValue(CustomerInfoPage.storeName,getXMLData("Store_Name"));
 				clickElement(CustomerInfoPage.storeNumber);
@@ -58,6 +65,23 @@ public class CustomerInfo extends CustomerInfoPage{
 				clickElement(CustomerInfoPage.ssnField);
 				typeValue(CustomerInfoPage.ssnField,getXMLData("SSN"));				
 				log.info("SSN is entered");	
+			}
+			if(isElementDisplayed(CustomerInfoPage.ssnField2,10))
+			{
+//				clickElement(CustomerInfoPage.ssnField2);
+//				typeValue(CustomerInfoPage.ssnField2,getXMLData("SSN2"));				
+//				log.info("SSN is entered");	
+				 String ssn = getXMLData("SSN2");
+				 WebElement webElement = getDriver().findElement(CustomerInfoPage.ssnField2);
+				 Actions actionBuilder=new Actions(getDriver());
+				 Action drawOnCanvas=actionBuilder.moveToElement(webElement)					 							 	
+			                .moveByOffset(3,1)
+			                .release()
+			                .click()
+			                 .sendKeys(ssn)
+			                .build();				
+				 drawOnCanvas.perform();
+
 			}
 			
 		}catch (Exception e) {

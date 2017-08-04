@@ -1,4 +1,4 @@
-Feature: Account_Details
+Feature: Customer_MoreInfo
 
 As an agent,I need to support customer for shopping XFINITY Mobile products and plans.
 

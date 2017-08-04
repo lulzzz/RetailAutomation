@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
+import com.framework.utils.ExtentReporter;
 import com.framework.utils.LogUtils;
 import com.retail.pageObjects.AccountDetailsPage;
 import com.retail.pageObjects.AccountDevicesPage;
@@ -23,6 +24,7 @@ public class viewNotes extends viewNotesPage{
 	@Given ("^I am in View Notes page$")
 	public void notesPage() {
 		try {
+			ExtentReporter.reportStep("BDD: Given I am in View Notes page" , "INFO");
 			Thread.sleep(5000);
 			acctLookUpObj.enterValidAcctNumber();
 			acctLookUpObj.clickOnLookUp();
@@ -45,6 +47,7 @@ public class viewNotes extends viewNotesPage{
 	@When ("^I click Back Button$")
 	public void backButton(){
 		try {
+			ExtentReporter.reportStep("BDD: When I click Back Button" , "INFO");
 			Thread.sleep(5000);
 			clickElement(viewNotesPage.backButton);
 			log.info("Back button is clicked");
@@ -63,9 +66,11 @@ public class viewNotes extends viewNotesPage{
 		try {
 			Thread.sleep(5000);
 			if(isElementDisplayed(AccountDetailsPage.Appointments, maxWait)) {
+				ExtentReporter.reportStep(getDriver(), "Account details page is displayed" , "INFO", 0);
 				log.info("The user is navigated to the Account Details page");
 			}
 			else {
+				ExtentReporter.reportStep(getDriver(), "Account details page is not displayed." , "INFO", 0);
 				log.info("Something went wrong");
 			}
 		}
@@ -79,18 +84,23 @@ public class viewNotes extends viewNotesPage{
 		try {
 			Thread.sleep(2000);
 			if(isElementDisplayed(viewNotesPage.message, maxWait)) {
+				ExtentReporter.reportStep(getDriver(), "Message Field is displayed" , "INFO", 0);
 				log.info("Message Field is displayed");
 			}
 			if(isElementDisplayed(viewNotesPage.source, maxWait)) {
+				ExtentReporter.reportStep(getDriver(), "Source Field is displayed" , "INFO", 0);
 				log.info("Source Field is displayed");
 			}
 			if(isElementDisplayed(viewNotesPage.name, maxWait)) {
+				ExtentReporter.reportStep(getDriver(), "Name Field is displayed" , "INFO", 0);
 				log.info("Name Field is displayed");
 			}
 			if(isElementDisplayed(viewNotesPage.subject, maxWait)) {
+				ExtentReporter.reportStep(getDriver(), "Subject Field is displayed" , "INFO", 0);
 				log.info("Subject Field is displayed");
 			}
 			if(isElementDisplayed(viewNotesPage.type, maxWait)) {
+				ExtentReporter.reportStep(getDriver(), "Type Field is displayed" , "INFO", 0);
 				log.info("Type Field is displayed");
 			}
 		}
@@ -104,6 +114,7 @@ public class viewNotes extends viewNotesPage{
 	public void sortingButton() {
 		try {
 			if(isElementDisplayed(viewNotesPage.sortingButton, maxWait)) {
+				ExtentReporter.reportStep(getDriver(), "Sorting button is displayed" , "INFO", 0);
 				log.info("Sorting button is displayed");
 			}
 		}

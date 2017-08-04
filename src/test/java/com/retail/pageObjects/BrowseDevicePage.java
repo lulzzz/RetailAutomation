@@ -11,7 +11,8 @@ public class BrowseDevicePage extends WebOperations{
  public static By
    //Total=By.xpath("//div[@class='price-pane add-info-pane']/div/div/div"),
     deviceSelect =By.xpath("//div[@class='additional-info open']//button[text()='Select']"),   
-   deviceButton = By.xpath("//button[text()='Devices']");
+   deviceButton = By.xpath("//button[text()='Devices']"),
+  accessoryButton = By.xpath("//button[text()='Accessories']");
   // deviceColor=By.xpath("/html/body/my-app/main/my-browse/div/div[1]/div[2]/div[1]/div[1]/my-device-preview/div[2]/div[2]/div/my-color-radio/form/label[1]/div[1]/div");
    
 	public static void selectDevice(String deviceName) 

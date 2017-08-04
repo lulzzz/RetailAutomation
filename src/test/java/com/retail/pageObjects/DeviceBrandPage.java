@@ -10,8 +10,13 @@ public class DeviceBrandPage extends WebOperations{
  public static By
  
  PhoneByBrand = By.xpath("//h2[text()='Phones by Brand']"),
- ViewCatalog = By.xpath("//div[@class='brands-container accessories']//button[text()='View Catalog']");
-
+ ViewCatalog = By.xpath("//div[@class='brands-container accessories']//button[text()='View Catalog']"),
+ carticonvalue = By.xpath("//div[@class='hidden-print']"),
+ accessory_hidden = By.xpath("//div[@class='disabled-cover v-center']"),
+ AccesoryByCategory = By.xpath("//h2[text()='Accessories by Category']"),
+ cust_name= By.xpath("//span[@class='cust-name']//a"),
+ accessory_hidden_text = By.xpath("//h2[contains(text(),'In order to ship an accessory, first add a device to the cart.')]"),
+ viewCatalog_device = By.xpath("//div[@class='brands-container']//button[text()='View Catalog']");
 
 
 	public static void selectDeviceBrand(String deviceName) 

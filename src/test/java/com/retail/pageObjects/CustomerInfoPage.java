@@ -16,6 +16,7 @@ public class CustomerInfoPage extends WebOperations{
 	justAccessories = By.xpath("//div[@class='verify-card text-left']//button[1]"),
 	singleLine = By.xpath("//div[@class='verify-card text-left']//button[2]"),
 	//singleLine = By.xpath("//BUTTON[@_ngcontent-c4=''][2]"),
+	ssnField2 = By.xpath("//label[contains(text(),'SSN')]"),
 	storeName = By.xpath("//label[contains(text(),'Store Name')]//input"),
 	storeNumber = By.xpath("//label[contains(text(),'Store Number')]//input"),
 	address = By.xpath("//label[contains(text(),'Address')]//input"),

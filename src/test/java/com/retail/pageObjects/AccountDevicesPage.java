@@ -21,6 +21,7 @@ public class AccountDevicesPage extends WebOperations{
 		errorOk = By.xpath("//*[@aria-label='Error']//button[text()='OK']"),
 		errorClose = By.xpath("//*[@aria-label='Error']//*[text()=' clear ']"),
 				backButton = By.xpath("//span[text()='Back']"),
+			manageDevices = By.xpath("//h3[text()='Manage Devices']"),
 		deviceDetailsClose = By.xpath("//*[@aria-label='Add Device']//*[text()=' clear ']"),
 		deviceDetailsCancel = By.xpath("//*[@aria-label='Add Device']//*[text()='Cancel']");
 }

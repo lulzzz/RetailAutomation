@@ -11,6 +11,7 @@ import cucumber.api.java.en.*;
 public class BrowseDevice extends BrowseDevicePage{
 
 	private static Logger log = Logger.getLogger(BrowseDevice.class);	
+	DeviceBrand devicebrand = new DeviceBrand();
 	
 @When("^Click on any Device in catalog$")	
 	public void selectDevice_Verify()  throws Exception{
@@ -132,6 +133,94 @@ public void agentSelect() throws Exception{
 	verifyTotalAmount();
 	clickSelect();
 	}catch(Exception e){
+		e.printStackTrace();
+		throw(e);
+	}
+}
+
+@When("^I select a device with its customization through ship flow$")
+public void select_device_customize_ship() throws Exception
+{
+	try{
+		ExtentReporter.reportStep("BDD Step: When I select a device with its customization through ship flow", "INFO");
+		devicebrand.selectDeviceBrand();
+		devicebrand.redirectedToBrowseDevice();
+		agentSelect();
+	}catch(Exception e){
+		e.printStackTrace();
+		throw(e);
+}
+
+}
+@When("^I select a device$")
+public void device_select_config() throws Exception 
+{
+	try{
+	   agentSelect();
+		
+}
+	catch(Exception e){
+		log.error("Error in DeviceBrand page");
+		e.printStackTrace();
+		throw(e);
+	}
+}
+@Given("^I am in Device Catalog page$")
+public void device_catalog() throws Exception 
+{
+	try{
+	  if(isElementDisplayed(BrowseDevicePage.deviceButton,5))
+	  {
+			ExtentReporter.reportStep(getDriver(),"Device Catalog page is displayed", "INFO",0);
+	  }
+	  else
+	  {
+			ExtentReporter.reportStep(getDriver(),"Device Catalog page is not displayed", "INFO",0);
+	  }
+		
+}
+	catch(Exception e){
+		log.error("Error in DeviceBrand page");
+		e.printStackTrace();
+		throw(e);
+	}
+}
+@And("^Click on Accessory in catalog page$")
+public void click_Accessory_browseDevice() throws Exception 
+{
+	try{
+		ExtentReporter.reportStep("BDD: And Click on Accessory in catalog page", "INFO");
+	 clickElement(BrowseDevicePage.accessoryButton);
+		
+	  
+		
+}
+	catch(Exception e){
+		log.error("Error in DeviceBrand page");
+		e.printStackTrace();
+		throw(e);
+	}
+}
+@Then("^it redirects to Browse_Accessories page$")
+public void redirected_Browse_accesories() throws Exception 
+{
+	try{
+		ExtentReporter.reportStep("BDD:Then it redirects to Browse_Accessories page", "INFO");
+	 if(isElementDisplayed(BrowseDevicePage.accessoryButton,5)){
+
+			ExtentReporter.reportStep(getDriver(),"Browse_Accessories page is displayed", "INFO",0);
+	  }
+	  else
+	  {
+			ExtentReporter.reportStep(getDriver(),"Browse_Accessories page is not displayed", "INFO",0);
+	  }
+		
+		
+	  
+		
+}
+	catch(Exception e){
+		log.error("Error in DeviceBrand page");
 		e.printStackTrace();
 		throw(e);
 	}

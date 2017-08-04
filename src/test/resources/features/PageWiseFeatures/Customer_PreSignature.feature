@@ -1,4 +1,4 @@
-Feature: Device_Search
+Feature: Customer_PreSignature
 
 As an agent,I need to support customer for shopping XFINITY Mobile products and plans.
 
